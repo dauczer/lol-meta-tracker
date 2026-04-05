@@ -1,0 +1,82 @@
+{
+  "TOP": [
+    {
+      "win_rate": 0.773,
+      "pick_rate": 0.004,
+      "avg_kda": 1.81,
+      "games": 22,
+      "champion": "Illaoi"
+    },
+    {
+      "win_rate": 0.655,
+      "pick_rate": 0.005,
+      "avg_kda": 1.9,
+      "games": 29,
+      "champion": "Nasus"
+    }
+  ],
+  "JUNGLE": [
+    {
+      "win_rate": 0.667,
+      "pick_rate": 0.006,
+      "avg_kda": 2.78,
+      "games": 33,
+      "champion": "Gwen"
+    },
+    {
+      "win_rate": 0.625,
+      "pick_rate": 0.007,
+      "avg_kda": 4.08,
+      "games": 40,
+      "champion": "Lillia"
+    }
+  ],
+  "MIDDLE": [
+    {
+      "win_rate": 0.685,
+      "pick_rate": 0.01,
+      "avg_kda": 3.01,
+      "games": 54,
+      "champion": "AurelionSol"
+    },
+    {
+      "win_rate": 0.619,
+      "pick_rate": 0.03,
+      "avg_kda": 2.5,
+      "games": 160,
+      "champion": "Zed"
+    }
+  ],
+  "BOTTOM": [
+    {
+      "win_rate": 0.727,
+      "pick_rate": 0.004,
+      "avg_kda": 4.61,
+      "games": 22,
+      "champion": "Xerath"
+    },
+    {
+      "win_rate": 0.698,
+      "pick_rate": 0.01,
+      "avg_kda": 3.52,
+      "games": 53,
+      "champion": "Lux"
+    }
+  ],
+  "UTILITY": [
+    {
+      "win_rate": 0.659,
+      "pick_rate": 0.008,
+      "avg_kda": 2.88,
+      "games": 41,
+      "champion": "Lux"
+    },
+    {
+      "win_rate": 0.655,
+      "pick_rate": 0.005,
+      "avg_kda": 2.92,
+      "games": 29,
+      "champion": "Shen"
+    }
+  ]
+}
