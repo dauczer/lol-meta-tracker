@@ -16,7 +16,7 @@ import json
 import logging
 import time
 from collections import deque
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from threading import Lock
 from typing import Any
@@ -274,7 +274,15 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
     all_ids: set[str] = set()
 
     puuids = list(puuid_map.values())
-    logger.info("Fetching match IDs for %d players...", len(puuids))
+    start_epoch = int(
+        (datetime.now(tz=timezone.utc) - timedelta(days=config.MATCH_LOOKBACK_DAYS))
+        .timestamp()
+    )
+    logger.info(
+        "Fetching match IDs for %d players (last %d days)...",
+        len(puuids),
+        config.MATCH_LOOKBACK_DAYS,
+    )
 
     skipped = 0
     for i, puuid in enumerate(puuids):
@@ -282,7 +290,11 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
         try:
             ids = _api_get(
                 url,
-                params={"queue": config.QUEUE_ID, "count": config.MATCHES_PER_PLAYER},
+                params={
+                    "queue": config.QUEUE_ID,
+                    "count": config.MATCHES_PER_PLAYER,
+                    "startTime": start_epoch,
+                },
             )
             all_ids.update(ids)
         except requests.exceptions.RequestException as exc:
