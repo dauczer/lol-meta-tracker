@@ -37,7 +37,7 @@ PLATFORM_STATUS_URL: str = PLATFORM_HOST + "/lol/status/v4/platform-data"
 # ---------------------------------------------------------------------------
 # Ingestion parameters
 # ---------------------------------------------------------------------------
-TIERS: list[str] = ["CHALLENGER", "GRANDMASTER", "MASTER"]
+TIERS: list[str] = ["CHALLENGER", "GRANDMASTER"]
 QUEUE_ID: int = 420  # Ranked Solo/Duo
 MATCHES_PER_PLAYER: int = 5
 MATCH_LOOKBACK_DAYS: int = 7  # only fetch matches from the last N days

@@ -168,16 +168,16 @@ def get_high_elo_players() -> list[dict[str, Any]]:
                 e.setdefault("tier", tier)
             all_players.extend(entries)
 
-            # For Master: stop early once we've hit the cap
-            if tier == "MASTER" and len(all_players) >= config.MAX_PLAYERS:
+            # Stop early once we've hit the cap (only matters for Master)
+            if len(all_players) >= config.MAX_PLAYERS:
                 logger.info(
-                    "  Reached MAX_PLAYERS cap (%d), stopping Master pagination.",
+                    "  Reached MAX_PLAYERS cap (%d), stopping pagination.",
                     config.MAX_PLAYERS,
                 )
                 break
 
-            # Non-Master tiers fit on one page; Master continues until empty or capped
-            if tier != "MASTER" or len(entries) < 205:
+            # If the page was full (~205 entries), there may be more pages
+            if len(entries) < 205:
                 break
             page += 1
 
