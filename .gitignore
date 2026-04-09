@@ -33,4 +33,8 @@ data/cache/
 
 # macOS
 .DS_Store
-.env
+
+# Local-only docs (not part of the repo)
+CLAUDE.md
+plan.md
+review.md

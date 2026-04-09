@@ -1,8 +1,10 @@
 """
 Smoke test: verify the Riot API key is valid and the platform is reachable.
 
-Skipped automatically when RIOT_API_KEY is not set — safe for offline dev.
-Run in CI before the main pipeline to fail fast on expired keys.
+Behaviour:
+  - Locally (no RIOT_API_KEY): skipped — safe for offline dev.
+  - In CI (CI env var set, no RIOT_API_KEY): fails loudly — a missing secret
+    is a misconfiguration, not a reason to pass silently.
 """
 from __future__ import annotations
 
@@ -13,9 +15,15 @@ import requests
 
 from pipeline import config
 
+_key_missing = not os.environ.get("RIOT_API_KEY")
+_in_ci = bool(os.environ.get("CI"))
+
+if _key_missing and _in_ci:
+    pytest.fail("RIOT_API_KEY secret is not configured in CI — add it to repository secrets.")
+
 
 @pytest.mark.skipif(
-    not os.environ.get("RIOT_API_KEY"),
+    _key_missing,
     reason="RIOT_API_KEY not set — skipping live API test",
 )
 class TestApiConnection:

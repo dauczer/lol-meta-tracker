@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.lock
+
+      - name: Lint (ruff)
+        run: ruff check pipeline/ tests/
+
+      - name: Type check (mypy)
+        run: mypy pipeline/
+
+      - name: Run tests
+        run: pytest tests/ -v --ignore=tests/test_api_connection.py
+
+      - name: Syntax-check enterprise reference code
+        run: python -m py_compile pipeline-enterprise/airflow/dags/meta_tracker_dag.py
