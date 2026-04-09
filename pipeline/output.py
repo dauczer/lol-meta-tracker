@@ -10,15 +10,23 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import pandas as pd
 
 from pipeline import config
 
 logger = logging.getLogger(__name__)
+
+
+def _atomic_write(path: Path, data: object) -> None:
+    """Write JSON atomically: write to .tmp then os.replace to avoid half-written files."""
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, indent=2))
+    os.replace(tmp, path)
 
 
 def _round_floats(record: dict[str, Any]) -> dict[str, Any]:
@@ -61,7 +69,7 @@ def write_meta_summary(
     }
 
     path = output_dir / "meta_summary.json"
-    path.write_text(json.dumps(summary, indent=2))
+    _atomic_write(path, summary)
     logger.info("Written: %s", path)
     return path
 
@@ -76,7 +84,7 @@ def write_top_champions(
         cleaned[role] = [_clean_record(c) for c in champs]
 
     path = output_dir / "top_champions.json"
-    path.write_text(json.dumps(cleaned, indent=2))
+    _atomic_write(path, cleaned)
     logger.info("Written: %s", path)
     return path
 
@@ -100,9 +108,10 @@ def write_champions_by_role(
         role_data = patch_stats[patch_stats["team_position"] == role].sort_values(
             "win_rate", ascending=False
         )
-        result[role] = [_clean_record(r) for r in role_data.to_dict("records")]
+        records = cast(list[dict[str, Any]], role_data.to_dict("records"))
+        result[role] = [_clean_record(r) for r in records]
 
     path = output_dir / "champions_by_role.json"
-    path.write_text(json.dumps(result, indent=2))
+    _atomic_write(path, result)
     logger.info("Written: %s", path)
     return path
