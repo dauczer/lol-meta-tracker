@@ -41,7 +41,6 @@ TIERS: list[str] = ["CHALLENGER", "GRANDMASTER"]
 QUEUE_ID: int = 420  # Ranked Solo/Duo
 MATCHES_PER_PLAYER: int = 5
 MATCH_LOOKBACK_DAYS: int = 7  # only fetch matches from the last N days
-MAX_PLAYERS: int = 1000  # cap total players; keeps all Chall/GM, top-LP Masters fill the rest
 
 # ---------------------------------------------------------------------------
 # Rate limits (personal API key)

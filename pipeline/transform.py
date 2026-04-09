@@ -14,7 +14,7 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import pandas as pd
 
@@ -40,12 +40,15 @@ def parse_matches(match_files: list[Path]) -> pd.DataFrame:
 
     logger.info("Parsing %d raw match files...", len(match_files))
 
+    malformed = 0
+
     for path in match_files:
         try:
             with path.open() as f:
                 match = json.load(f)
         except (json.JSONDecodeError, OSError) as exc:
             logger.warning("Skipping %s: %s", path.name, exc)
+            malformed += 1
             continue
 
         try:
@@ -71,7 +74,19 @@ def parse_matches(match_files: list[Path]) -> pd.DataFrame:
                 )
         except (KeyError, TypeError) as exc:
             logger.warning("Skipping malformed match %s: %s", path.name, exc)
+            malformed += 1
             continue
+
+    malformed_pct = malformed / len(match_files)
+    if malformed_pct > 0.10:
+        raise ValueError(
+            f"{malformed}/{len(match_files)} match files ({malformed_pct:.0%}) failed to parse. "
+            "This likely indicates a Riot API schema change — inspect the raw files."
+        )
+    if malformed:
+        logger.warning(
+            "%d/%d match files skipped (%.1f%%).", malformed, len(match_files), malformed_pct * 100
+        )
 
     df = pd.DataFrame(rows)
     logger.info("Parsed %d participant rows from %d files.", len(df), len(match_files))
@@ -135,8 +150,8 @@ def aggregate_stats(df: pd.DataFrame) -> pd.DataFrame:
     grouped = grouped.merge(patch_match_counts, on="patch", how="left")
 
     grouped["win_rate"] = grouped["wins"] / grouped["games_played"]
-    # 2 teams per match → each match contributes 2 picks per role
-    grouped["pick_rate"] = grouped["games_played"] / (grouped["patch_matches"] * 2)
+    # Each match has one pick per role per team, so denominator is patch_matches (not * 2)
+    grouped["pick_rate"] = grouped["games_played"] / grouped["patch_matches"]
     grouped["avg_kda"] = (grouped["total_kills"] + grouped["total_assists"]) / grouped[
         "total_deaths"
     ].clip(lower=1)
@@ -155,8 +170,12 @@ def aggregate_stats(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def current_patch(stats: pd.DataFrame) -> str:
-    """Return the lexicographically latest patch string in the stats DataFrame."""
-    return stats["patch"].max()
+    """Return the latest patch string, comparing (MAJOR, MINOR) as integers."""
+    def _patch_key(p: str) -> tuple[int, int]:
+        parts = p.split(".")
+        return (int(parts[0]), int(parts[1]))
+
+    return str(max(stats["patch"].unique(), key=_patch_key))
 
 
 def top_champions_per_role(
@@ -181,9 +200,13 @@ def top_champions_per_role(
     for role in config.ROLES:
         role_data = eligible[eligible["team_position"] == role]
         top = role_data.nlargest(n, "win_rate")
-        result[role] = top[
-            ["champion_name", "win_rate", "pick_rate", "games_played", "avg_kda"]
-        ].to_dict("records")
+        records = cast(
+            list[dict[str, Any]],
+            top[["champion_name", "win_rate", "pick_rate", "games_played", "avg_kda"]].to_dict(
+                "records"
+            ),
+        )
+        result[role] = records
 
         if not result[role]:
             logger.warning(

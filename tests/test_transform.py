@@ -5,7 +5,6 @@ All tests run without an API key using the sample_match.json fixture.
 """
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import pandas as pd
@@ -41,13 +40,30 @@ class TestParseMatches:
         df = parse_matches([])
         assert df.empty
 
-    def test_skips_corrupt_json(self, tmp_path: Path) -> None:
-        match_dir = tmp_path / "2026-04-04" / "matches"
-        match_dir.mkdir(parents=True)
-        bad_file = match_dir / "bad.json"
+    def test_skips_corrupt_json(self, tmp_path: Path, tmp_raw_files: list[Path]) -> None:
+        # 1 bad file alongside 10+ good files → malformed % is well under 10%
+        bad_file = tmp_path / "bad.json"
         bad_file.write_text("{not valid json")
-        df = parse_matches([bad_file])
-        assert df.empty
+        good_files = tmp_raw_files * 15  # 15 good copies → bad = 1/16 ≈ 6%
+        df = parse_matches(good_files + [bad_file])
+        assert not df.empty  # good matches were still parsed
+
+    def test_raises_when_malformed_exceeds_threshold(
+        self, tmp_path: Path, tmp_raw_files: list[Path]
+    ) -> None:
+        bad_files = []
+        for i in range(10):
+            f = tmp_path / f"bad_{i}.json"
+            f.write_text("{not valid json")
+            bad_files.append(f)
+        # 1 good file, 10 bad files → 91% malformed → should raise
+        with pytest.raises(ValueError, match="failed to parse"):
+            parse_matches(tmp_raw_files + bad_files)
+
+    def test_does_not_raise_within_threshold(self, tmp_raw_files: list[Path]) -> None:
+        # 1 good file, 0 bad → 0% malformed → fine
+        df = parse_matches(tmp_raw_files)
+        assert not df.empty
 
 
 class TestFilterValid:
@@ -121,7 +137,7 @@ class TestAggregateStats:
         assert thresh["avg_kda"] == pytest.approx(10.0)
 
     def test_pick_rate_denominator(self) -> None:
-        # 2 unique matches on patch 14.7, 2 teams → denominator = 4
+        # 2 unique matches on patch 14.7; denominator = 2 matches (one role pick per match)
         df = pd.DataFrame([
             {
                 "match_id": "M1", "champion_name": "Jinx", "team_position": "BOTTOM",
@@ -136,7 +152,7 @@ class TestAggregateStats:
         ])
         stats = aggregate_stats(df)
         jinx = stats[stats["champion_name"] == "Jinx"].iloc[0]
-        assert jinx["pick_rate"] == pytest.approx(2 / (2 * 2))  # 2 games / (2 matches * 2 teams)
+        assert jinx["pick_rate"] == pytest.approx(2 / 2)  # 2 games / 2 matches
 
     def test_empty_input_returns_empty(self) -> None:
         result = aggregate_stats(pd.DataFrame())
@@ -147,7 +163,6 @@ class TestTopChampionsPerRole:
     def _build_stats(self) -> pd.DataFrame:
         """Stats DataFrame with a known winner per role."""
         rows = []
-        roles = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
         champions = {
             "TOP": [("Ambessa", 0.60, 30), ("K'Sante", 0.52, 25), ("Darius", 0.40, 22)],
             "JUNGLE": [("Vi", 0.55, 40), ("Hecarim", 0.48, 35)],
@@ -202,6 +217,11 @@ class TestCurrentPatch:
             {"patch": "14.7", "champion_name": "B"},
             {"patch": "14.10", "champion_name": "C"},
         ])
-        # lexicographic max: "14.7" > "14.6" but "14.10" < "14.7" lexicographically
-        # This is an expected limitation of lexicographic sorting for patch strings
-        assert current_patch(df) in {"14.7", "14.10"}
+        assert current_patch(df) == "14.10"
+
+    def test_semver_ordering_across_minor_rollover(self) -> None:
+        df = pd.DataFrame([
+            {"patch": "14.9", "champion_name": "A"},
+            {"patch": "14.10", "champion_name": "B"},
+        ])
+        assert current_patch(df) == "14.10"

@@ -1,6 +1,6 @@
 # LoL Meta Tracker
 
-An end-to-end data engineering pipeline that ingests League of Legends ranked match data from the Riot API, transforms it into meta statistics, and delivers clean JSON files — refreshed daily via GitHub Actions.
+An end-to-end data engineering pipeline that ingests League of Legends ranked match data from the Riot API, transforms it into meta statistics, and delivers clean JSON files — refreshed weekly via GitHub Actions.
 
 Built as a portfolio project to demonstrate the full data engineering lifecycle using **100% free tools**.
 
@@ -10,7 +10,7 @@ Built as a portfolio project to demonstrate the full data engineering lifecycle 
 
 ```mermaid
 graph LR
-    A[Riot API\nChallenges/GM/Master EUW] -->|ingest.py| B[data/raw/\nRaw JSON files]
+    A[Riot API\nChallenger/GM EUW] -->|ingest.py| B[data/raw/\nRaw JSON files]
     B -->|transform.py| C[pandas\nIn-memory aggregation]
     C -->|output.py| D[data/output/\nJSON files]
     D -->|GitHub Actions| E[Portfolio Website]
@@ -35,7 +35,7 @@ See [`pipeline-enterprise/`](pipeline-enterprise/) for reference implementations
 ## Pipeline Stages
 
 1. **Ingest** (`pipeline/ingest.py`)
-   - Fetches ~1500 Challenger/Grandmaster/Master players via LEAGUE-EXP-V4
+   - Fetches ~1000 Challenger/Grandmaster players via LEAGUE-EXP-V4
    - Resolves PUUIDs via SUMMONER-V4 (cached — PUUIDs never change)
    - Fetches last 5 ranked matches per player (deduped across players)
    - Saves raw JSON per match to `data/raw/{YYYY-MM-DD}/matches/`
@@ -45,15 +45,15 @@ See [`pipeline-enterprise/`](pipeline-enterprise/) for reference implementations
    - Parses 10 participant rows per match
    - Filters remakes (< 900 s) and rows with missing roles
    - Aggregates by champion + role + patch: win rate, pick rate, avg KDA
-   - Selects top 2 per role (minimum 20 games for statistical relevance)
+   - Selects top 2 per role (minimum 10 games for statistical relevance)
 
 3. **Output** (`pipeline/output.py`)
    - Writes `data/output/meta_summary.json`
    - Writes `data/output/top_champions.json`
    - Writes `data/output/champions_by_role.json`
 
-4. **Orchestration** (`.github/workflows/daily-refresh.yml`)
-   - Runs daily at 06:00 UTC
+4. **Orchestration** (`.github/workflows/weekly-refresh.yml`)
+   - Runs weekly at 06:00 UTC every Monday
    - Commits updated output JSONs back to the repository
 
 ---
@@ -122,7 +122,7 @@ pytest tests/ -v
 1. Push this repo to GitHub
 2. Go to **Settings → Secrets and variables → Actions**
 3. Add a secret named `RIOT_API_KEY` with your (non-expiring) personal project key
-4. Trigger the first run manually: **Actions → Daily Meta Refresh → Run workflow**
+4. Trigger the first run manually: **Actions → Weekly Meta Refresh → Run workflow**
 
 ---
 
@@ -151,7 +151,8 @@ lol-meta-tracker/
 ├── scripts/
 │   └── test_api_key.py     # First-run API key verification
 └── .github/workflows/
-    └── daily-refresh.yml   # Cron job: runs daily at 06:00 UTC
+    ├── weekly-refresh.yml  # Cron job: runs weekly Mon at 06:00 UTC
+    └── ci.yml              # PR validation: pytest + ruff + mypy
 ```
 
 ---
@@ -159,7 +160,7 @@ lol-meta-tracker/
 ## Scope
 
 - **Region**: EUW only
-- **Tiers**: Challenger + Grandmaster + Master (~1500 players)
+- **Tiers**: Challenger + Grandmaster (~1000 players)
 - **Queue**: Ranked Solo/Duo (queueId 420)
 - **Volume**: ~3000-5000 API calls per run, ~1500-3000 unique matches/day
 - **Runtime**: 10-15 minutes (well within GitHub Actions 2000 min/month free tier)

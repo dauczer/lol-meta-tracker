@@ -17,13 +17,13 @@ from pipeline import config
 from pipeline.ingest import (
     RateLimiter,
     _load_cache,
+    _load_processed_matches,
     _save_cache,
     fetch_match_details,
     get_high_elo_players,
     get_match_ids,
     resolve_puuids,
 )
-
 
 # ---------------------------------------------------------------------------
 # RateLimiter
@@ -48,6 +48,19 @@ class TestRateLimiter:
         elapsed = time.monotonic() - start
         # 10 requests at 5/s must take at least 1 second
         assert elapsed >= 1.0, f"Should have been rate-limited, elapsed={elapsed:.2f}s"
+
+    def test_record_403_raises_after_max_consecutive(self) -> None:
+        limiter = RateLimiter()
+        for _ in range(limiter.MAX_CONSECUTIVE_403S - 1):
+            limiter.record_403()  # should not raise yet
+        with pytest.raises(RuntimeError, match="expired or invalid"):
+            limiter.record_403()
+
+    def test_record_success_resets_403_counter(self) -> None:
+        limiter = RateLimiter()
+        limiter.record_403()
+        limiter.record_success()
+        assert limiter.consecutive_403s == 0
 
 
 # ---------------------------------------------------------------------------
@@ -91,30 +104,31 @@ class TestGetHighEloPlayers:
             )
 
         players = get_high_elo_players()
-        assert len(players) == 3
+        assert len(players) == len(config.TIERS)
         tiers_found = {p["tier"] for p in players}
         assert tiers_found == set(config.TIERS)
 
     @responses_lib.activate
-    def test_paginates_master_tier(self) -> None:
-        """Master tier should keep fetching until an empty page is returned."""
-        for tier in ["CHALLENGER", "GRANDMASTER"]:
-            url = config.LEAGUE_ENTRIES_URL.format(tier=tier)
-            responses_lib.add(responses_lib.GET, url, json=[{"summonerId": f"s-{tier}", "tier": tier}])
-
-        master_url = config.LEAGUE_ENTRIES_URL.format(tier="MASTER")
+    def test_paginates_when_page_is_full(self) -> None:
+        """When a page returns 205 entries, the next page should be fetched."""
+        chall_url = config.LEAGUE_ENTRIES_URL.format(tier="CHALLENGER")
         # Page 1: 205 entries (triggers pagination)
         responses_lib.add(
             responses_lib.GET,
-            master_url,
-            json=[{"summonerId": f"master-{i}", "tier": "MASTER"} for i in range(205)],
+            chall_url,
+            json=[{"summonerId": f"chall-{i}", "tier": "CHALLENGER"} for i in range(205)],
         )
         # Page 2: empty — stops pagination
-        responses_lib.add(responses_lib.GET, master_url, json=[])
+        responses_lib.add(responses_lib.GET, chall_url, json=[])
+
+        gm_url = config.LEAGUE_ENTRIES_URL.format(tier="GRANDMASTER")
+        responses_lib.add(
+            responses_lib.GET, gm_url, json=[{"summonerId": "gm-0", "tier": "GRANDMASTER"}]
+        )
 
         players = get_high_elo_players()
-        master_players = [p for p in players if p["tier"] == "MASTER"]
-        assert len(master_players) == 205
+        chall_players = [p for p in players if p["tier"] == "CHALLENGER"]
+        assert len(chall_players) == 205
 
 
 # ---------------------------------------------------------------------------
@@ -229,5 +243,5 @@ class TestFetchMatchDetails:
 
             fetch_match_details([match_id], "2026-04-04")
 
-            processed = _load_cache(processed_file)
-            assert processed.get(match_id) is True
+            processed = _load_processed_matches(processed_file)
+            assert match_id in processed
