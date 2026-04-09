@@ -4,7 +4,7 @@ Stage 1 — Ingestion
 Fetches raw match data from the Riot API and persists it to disk.
 
 Flow:
-  1. get_high_elo_players()  — LEAGUE-EXP-V4: Challenger / GM / Master
+  1. get_high_elo_players()  — LEAGUE-EXP-V4: Challenger / Grandmaster
   2. resolve_puuids()        — SUMMONER-V4, with local cache
   3. get_match_ids()         — MATCH-V5 list, deduped, skipping processed matches
   4. fetch_match_details()   — MATCH-V5 detail, saved to data/raw/{date}/matches/
@@ -12,8 +12,10 @@ Flow:
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
+import re
 import time
 from collections import deque
 from datetime import date, datetime, timedelta, timezone
@@ -34,6 +36,10 @@ from pipeline import config
 
 logger = logging.getLogger(__name__)
 
+
+class _RiotRateLimitError(Exception):
+    """Raised on HTTP 429 so tenacity can retry it with a distinct predicate."""
+
 # ---------------------------------------------------------------------------
 # Rate limiter
 # ---------------------------------------------------------------------------
@@ -46,7 +52,12 @@ class RateLimiter:
     Blocks the calling thread until a request slot is available in both
     windows.  Uses a 50 ms polling interval — low overhead for a single-
     threaded pipeline.
+
+    Also tracks consecutive 403 responses to detect an expired API key;
+    raises RuntimeError after MAX_CONSECUTIVE_403S failures.
     """
+
+    MAX_CONSECUTIVE_403S: int = 3
 
     def __init__(
         self,
@@ -58,9 +69,14 @@ class RateLimiter:
         self._short_window: deque[float] = deque()  # 1 s window
         self._long_window: deque[float] = deque()   # 120 s window
         self._lock = Lock()
+        self.consecutive_403s: int = 0
 
     def acquire(self) -> None:
-        """Block until a request slot is available in both windows."""
+        """Block until a request slot is available in both windows.
+
+        Computes the exact time until the next slot opens and sleeps precisely
+        that long, avoiding the busy-poll overhead of a fixed 50 ms interval.
+        """
         while True:
             with self._lock:
                 now = time.monotonic()
@@ -78,7 +94,29 @@ class RateLimiter:
                     self._long_window.append(now)
                     return
 
-            time.sleep(0.05)
+                # Compute how long until the oldest slot in either window expires
+                sleep_until = float("inf")
+                if len(self._short_window) >= self._per_second:
+                    sleep_until = min(sleep_until, self._short_window[0] + 1.0)
+                if len(self._long_window) >= self._per_2min:
+                    sleep_until = min(sleep_until, self._long_window[0] + 120.0)
+
+            delay = max(0.0, sleep_until - time.monotonic())
+            time.sleep(delay)
+
+    def record_success(self) -> None:
+        """Reset the 403 counter after a successful response."""
+        self.consecutive_403s = 0
+
+    def record_403(self) -> None:
+        """Increment the 403 counter; raise if the key appears dead."""
+        self.consecutive_403s += 1
+        if self.consecutive_403s >= self.MAX_CONSECUTIVE_403S:
+            raise RuntimeError(
+                f"API key appears to be expired or invalid "
+                f"({self.consecutive_403s} consecutive 403 responses). "
+                "Regenerate your key at https://developer.riotgames.com"
+            )
 
 
 # Module-level limiter shared across all API calls
@@ -88,21 +126,16 @@ _limiter = RateLimiter()
 # HTTP client
 # ---------------------------------------------------------------------------
 
-_consecutive_403s = 0
-_MAX_CONSECUTIVE_403S = 3
-
 
 @retry(
-    stop=stop_after_attempt(5),
-    wait=wait_exponential(multiplier=1, min=2, max=60),
-    retry=retry_if_exception_type(requests.exceptions.RequestException),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=30),
+    retry=retry_if_exception_type((requests.exceptions.RequestException, _RiotRateLimitError)),
     before_sleep=before_sleep_log(logger, logging.WARNING),
     reraise=True,
 )
 def _api_get(url: str, params: dict[str, Any] | None = None) -> Any:
     """Make a rate-limited, retrying GET request to the Riot API."""
-    global _consecutive_403s
-
     _limiter.acquire()
     resp = requests.get(
         url,
@@ -112,23 +145,17 @@ def _api_get(url: str, params: dict[str, Any] | None = None) -> Any:
     )
 
     if resp.status_code == 403:
-        _consecutive_403s += 1
-        if _consecutive_403s >= _MAX_CONSECUTIVE_403S:
-            raise RuntimeError(
-                f"API key appears to be expired or invalid "
-                f"({_consecutive_403s} consecutive 403 responses). "
-                "Regenerate your key at https://developer.riotgames.com"
-            )
+        _limiter.record_403()
         raise requests.exceptions.HTTPError(response=resp)
 
     if resp.status_code == 429:
         retry_after = int(resp.headers.get("Retry-After", 5))
         logger.warning("Rate limited by Riot API. Sleeping %ds.", retry_after)
         time.sleep(retry_after)
-        raise requests.exceptions.RequestException("429 Rate Limited")
+        raise _RiotRateLimitError(f"429 from Riot API; retrying after {retry_after}s")
 
     resp.raise_for_status()
-    _consecutive_403s = 0
+    _limiter.record_success()
     return resp.json()
 
 
@@ -137,18 +164,11 @@ def _api_get(url: str, params: dict[str, Any] | None = None) -> Any:
 # ---------------------------------------------------------------------------
 
 
-_TIER_PRIORITY: dict[str, int] = {"CHALLENGER": 0, "GRANDMASTER": 1, "MASTER": 2}
-
-
 def get_high_elo_players() -> list[dict[str, Any]]:
     """
-    Fetch players in Challenger, Grandmaster, and Master tiers (EUW),
-    capped at MAX_PLAYERS total.
+    Fetch players in Challenger and Grandmaster tiers (EUW).
 
-    The API returns entries sorted by LP descending, so for Master we stop
-    fetching pages as soon as we have enough players to fill the cap — no
-    need to pull all 10,000+ Master entries.  Challenger and GM are always
-    fetched in full (they each fit on one page).
+    Both tiers fit on a single API page so no pagination is needed.
 
     Returns a list of league-entry dicts containing at minimum:
       puuid (or summonerId), leaguePoints, tier.
@@ -168,14 +188,6 @@ def get_high_elo_players() -> list[dict[str, Any]]:
                 e.setdefault("tier", tier)
             all_players.extend(entries)
 
-            # Stop early once we've hit the cap (only matters for Master)
-            if len(all_players) >= config.MAX_PLAYERS:
-                logger.info(
-                    "  Reached MAX_PLAYERS cap (%d), stopping pagination.",
-                    config.MAX_PLAYERS,
-                )
-                break
-
             # If the page was full (~205 entries), there may be more pages
             if len(entries) < 205:
                 break
@@ -183,11 +195,7 @@ def get_high_elo_players() -> list[dict[str, Any]]:
 
         logger.info("  %s: %d entries.", tier, len(all_players) - tier_count_before)
 
-    # Trim to exact cap (last page may have pushed us slightly over)
-    if len(all_players) > config.MAX_PLAYERS:
-        all_players = all_players[: config.MAX_PLAYERS]
-
-    logger.info("Total players after cap: %d", len(all_players))
+    logger.info("Total players fetched: %d", len(all_players))
     return all_players
 
 
@@ -195,7 +203,8 @@ def _load_cache(path: Path) -> dict[str, Any]:
     """Load a JSON cache file, returning an empty dict if it doesn't exist."""
     if path.exists():
         with path.open() as f:
-            return json.load(f)
+            data: dict[str, Any] = json.load(f)
+            return data
     return {}
 
 
@@ -203,6 +212,29 @@ def _save_cache(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w") as f:
         json.dump(data, f, indent=2)
+
+
+def _load_processed_matches(path: Path) -> set[str]:
+    """Load the set of processed match IDs.
+
+    Supports both the new list format and the legacy dict[str, bool] format
+    so existing caches are not broken on first upgrade.
+    """
+    if not path.exists():
+        return set()
+    with path.open() as f:
+        raw = json.load(f)
+    if isinstance(raw, list):
+        return set(raw)
+    # Legacy dict format: {"matchId": true, ...}
+    return set(raw.keys())
+
+
+def _save_processed_matches(path: Path, match_ids: set[str]) -> None:
+    """Persist processed match IDs as a JSON array."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w") as f:
+        json.dump(sorted(match_ids), f, indent=2)
 
 
 def resolve_puuids(players: list[dict[str, Any]]) -> dict[str, str]:
@@ -270,7 +302,7 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
 
     Returns: list of new, unique match IDs to fetch.
     """
-    processed: dict[str, bool] = _load_cache(config.PROCESSED_MATCHES_FILE)
+    processed: set[str] = _load_processed_matches(config.PROCESSED_MATCHES_FILE)
     all_ids: set[str] = set()
 
     puuids = list(puuid_map.values())
@@ -299,7 +331,8 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
             all_ids.update(ids)
         except requests.exceptions.RequestException as exc:
             skipped += 1
-            logger.warning("Skipping player %s after retries exhausted: %s", puuid[:20], exc)
+            puuid_tag = hashlib.sha256(puuid.encode()).hexdigest()[:8]
+            logger.warning("Skipping player %s after retries exhausted: %s", puuid_tag, exc)
 
         if (i + 1) % 200 == 0:
             logger.info("  Processed %d / %d players...", i + 1, len(puuids))
@@ -329,7 +362,7 @@ def fetch_match_details(match_ids: list[str], run_date: str) -> list[Path]:
     out_dir = config.RAW_DIR / run_date / "matches"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    processed: dict[str, bool] = _load_cache(config.PROCESSED_MATCHES_FILE)
+    processed: set[str] = _load_processed_matches(config.PROCESSED_MATCHES_FILE)
     saved_paths: list[Path] = []
 
     logger.info("Fetching details for %d matches...", len(match_ids))
@@ -350,21 +383,31 @@ def fetch_match_details(match_ids: list[str], run_date: str) -> list[Path]:
         saved_paths.append(file_path)
 
         # Update cache immediately so a mid-run crash doesn't re-fetch
-        processed[match_id] = True
+        processed.add(match_id)
         if (i + 1) % 50 == 0:
-            _save_cache(config.PROCESSED_MATCHES_FILE, processed)
+            _save_processed_matches(config.PROCESSED_MATCHES_FILE, processed)
             logger.info("  Fetched %d / %d matches...", i + 1, len(match_ids))
 
-    _save_cache(config.PROCESSED_MATCHES_FILE, processed)
+    _save_processed_matches(config.PROCESSED_MATCHES_FILE, processed)
     if skipped:
         logger.warning("Skipped %d / %d matches due to network errors.", skipped, len(match_ids))
     logger.info("Saved %d match files to %s.", len(saved_paths), out_dir)
     return saved_paths
 
 
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
 def _latest_raw_files() -> list[Path]:
-    """Return match JSON files from the most recent date partition."""
-    date_dirs = sorted(config.RAW_DIR.iterdir())
+    """Return match JSON files from the most recent date partition.
+
+    Only directories whose name matches YYYY-MM-DD are considered, so
+    stray debug folders (e.g. '2099-01-01') or non-date entries are ignored.
+    """
+    date_dirs = sorted(
+        d for d in config.RAW_DIR.iterdir()
+        if d.is_dir() and _ISO_DATE_RE.match(d.name)
+    )
     if not date_dirs:
         raise RuntimeError(
             "No raw data found in data/raw/. "
