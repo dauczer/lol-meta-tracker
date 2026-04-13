@@ -1,82 +1,82 @@
 {
   "TOP": [
     {
-      "win_rate": 0.773,
-      "pick_rate": 0.004,
-      "avg_kda": 1.81,
-      "games": 22,
-      "champion": "Illaoi"
+      "win_rate": 0.667,
+      "pick_rate": 0.011,
+      "avg_kda": 2.27,
+      "games": 27,
+      "champion": "Cassiopeia"
     },
     {
-      "win_rate": 0.655,
+      "win_rate": 0.667,
       "pick_rate": 0.005,
-      "avg_kda": 1.9,
-      "games": 29,
-      "champion": "Nasus"
+      "avg_kda": 2.94,
+      "games": 12,
+      "champion": "Velkoz"
     }
   ],
   "JUNGLE": [
     {
-      "win_rate": 0.667,
-      "pick_rate": 0.006,
-      "avg_kda": 2.78,
-      "games": 33,
-      "champion": "Gwen"
+      "win_rate": 0.7,
+      "pick_rate": 0.004,
+      "avg_kda": 3.67,
+      "games": 10,
+      "champion": "Morgana"
     },
     {
-      "win_rate": 0.625,
-      "pick_rate": 0.007,
-      "avg_kda": 4.08,
-      "games": 40,
-      "champion": "Lillia"
+      "win_rate": 0.64,
+      "pick_rate": 0.021,
+      "avg_kda": 3.8,
+      "games": 50,
+      "champion": "Belveth"
     }
   ],
   "MIDDLE": [
     {
-      "win_rate": 0.685,
-      "pick_rate": 0.01,
-      "avg_kda": 3.01,
-      "games": 54,
-      "champion": "AurelionSol"
+      "win_rate": 0.8,
+      "pick_rate": 0.009,
+      "avg_kda": 3.24,
+      "games": 20,
+      "champion": "Ambessa"
     },
     {
-      "win_rate": 0.619,
-      "pick_rate": 0.03,
-      "avg_kda": 2.5,
-      "games": 160,
-      "champion": "Zed"
+      "win_rate": 0.692,
+      "pick_rate": 0.006,
+      "avg_kda": 1.76,
+      "games": 13,
+      "champion": "Karthus"
     }
   ],
   "BOTTOM": [
     {
       "win_rate": 0.727,
-      "pick_rate": 0.004,
-      "avg_kda": 4.61,
-      "games": 22,
-      "champion": "Xerath"
+      "pick_rate": 0.005,
+      "avg_kda": 3.19,
+      "games": 11,
+      "champion": "Zyra"
     },
     {
-      "win_rate": 0.698,
-      "pick_rate": 0.01,
-      "avg_kda": 3.52,
-      "games": 53,
-      "champion": "Lux"
+      "win_rate": 0.692,
+      "pick_rate": 0.006,
+      "avg_kda": 2.47,
+      "games": 13,
+      "champion": "Syndra"
     }
   ],
   "UTILITY": [
     {
-      "win_rate": 0.659,
-      "pick_rate": 0.008,
-      "avg_kda": 2.88,
-      "games": 41,
-      "champion": "Lux"
+      "win_rate": 0.818,
+      "pick_rate": 0.005,
+      "avg_kda": 2.64,
+      "games": 11,
+      "champion": "Amumu"
     },
     {
-      "win_rate": 0.655,
-      "pick_rate": 0.005,
-      "avg_kda": 2.92,
-      "games": 29,
-      "champion": "Shen"
+      "win_rate": 0.769,
+      "pick_rate": 0.006,
+      "avg_kda": 3.9,
+      "games": 13,
+      "champion": "Galio"
     }
   ]
 }
