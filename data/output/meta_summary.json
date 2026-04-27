@@ -1,11 +1,11 @@
 {
-  "patch": "16.7",
+  "patch": "16.8",
   "region": "EUW",
   "tiers": [
     "CHALLENGER",
     "GRANDMASTER"
   ],
-  "total_matches": 2351,
+  "total_matches": 2319,
   "total_champions_tracked": 172,
-  "last_updated": "2026-04-13T08:53:23Z"
+  "last_updated": "2026-04-27T09:08:40Z"
 }
