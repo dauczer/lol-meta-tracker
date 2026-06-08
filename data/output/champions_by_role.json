@@ -3,12 +3,52 @@
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.778,
-      "pick_rate": 0.006,
-      "avg_kda": 3.16,
-      "games": 18,
-      "champion": "Leblanc"
+      "wins": 9,
+      "win_rate": 0.9,
+      "pick_rate": 0.003,
+      "avg_kda": 2.8,
+      "games": 10,
+      "champion": "KogMaw"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.846,
+      "pick_rate": 0.004,
+      "avg_kda": 2.84,
+      "games": 13,
+      "champion": "Galio"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.714,
+      "pick_rate": 0.007,
+      "avg_kda": 2.17,
+      "games": 21,
+      "champion": "Annie"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 24,
+      "win_rate": 0.706,
+      "pick_rate": 0.011,
+      "avg_kda": 2.12,
+      "games": 34,
+      "champion": "Quinn"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 27,
+      "win_rate": 0.675,
+      "pick_rate": 0.013,
+      "avg_kda": 1.67,
+      "games": 40,
+      "champion": "Kayle"
     },
     {
       "team_position": "TOP",
@@ -16,139 +56,109 @@
       "wins": 10,
       "win_rate": 0.667,
       "pick_rate": 0.005,
-      "avg_kda": 2.15,
+      "avg_kda": 2.41,
       "games": 15,
-      "champion": "Ekko"
+      "champion": "RekSai"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.667,
-      "pick_rate": 0.004,
-      "avg_kda": 2.37,
-      "games": 12,
-      "champion": "Skarner"
+      "wins": 35,
+      "win_rate": 0.648,
+      "pick_rate": 0.017,
+      "avg_kda": 1.87,
+      "games": 54,
+      "champion": "Warwick"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 27,
+      "wins": 9,
       "win_rate": 0.643,
-      "pick_rate": 0.015,
-      "avg_kda": 1.55,
-      "games": 42,
-      "champion": "Tryndamere"
+      "pick_rate": 0.005,
+      "avg_kda": 3.14,
+      "games": 14,
+      "champion": "AurelionSol"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 20,
-      "win_rate": 0.625,
-      "pick_rate": 0.011,
-      "avg_kda": 2.24,
-      "games": 32,
-      "champion": "Zoe"
+      "wins": 16,
+      "win_rate": 0.64,
+      "pick_rate": 0.008,
+      "avg_kda": 2.36,
+      "games": 25,
+      "champion": "Sylas"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 18,
-      "win_rate": 0.621,
-      "pick_rate": 0.01,
-      "avg_kda": 1.56,
-      "games": 29,
-      "champion": "Illaoi"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.619,
-      "pick_rate": 0.007,
-      "avg_kda": 2.01,
-      "games": 21,
-      "champion": "Shyvana"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 27,
-      "win_rate": 0.614,
-      "pick_rate": 0.016,
-      "avg_kda": 2.17,
-      "games": 44,
-      "champion": "Kennen"
+      "wins": 11,
+      "win_rate": 0.611,
+      "pick_rate": 0.006,
+      "avg_kda": 1.51,
+      "games": 18,
+      "champion": "Kalista"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 6,
       "win_rate": 0.6,
-      "pick_rate": 0.004,
-      "avg_kda": 1.36,
-      "games": 10,
-      "champion": "MonkeyKing"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 18,
-      "win_rate": 0.6,
-      "pick_rate": 0.011,
-      "avg_kda": 1.82,
-      "games": 30,
-      "champion": "Mordekaiser"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.6,
-      "pick_rate": 0.004,
-      "avg_kda": 2.22,
+      "pick_rate": 0.003,
+      "avg_kda": 2.61,
       "games": 10,
       "champion": "Veigar"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 21,
+      "wins": 9,
       "win_rate": 0.6,
-      "pick_rate": 0.012,
-      "avg_kda": 1.92,
-      "games": 35,
-      "champion": "Quinn"
+      "pick_rate": 0.005,
+      "avg_kda": 1.66,
+      "games": 15,
+      "champion": "Brand"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 24,
-      "win_rate": 0.585,
-      "pick_rate": 0.015,
-      "avg_kda": 1.45,
-      "games": 41,
-      "champion": "Gwen"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 7,
+      "wins": 14,
       "win_rate": 0.583,
-      "pick_rate": 0.004,
-      "avg_kda": 1.7,
-      "games": 12,
-      "champion": "Diana"
+      "pick_rate": 0.008,
+      "avg_kda": 3.28,
+      "games": 24,
+      "champion": "Zilean"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 11,
+      "wins": 22,
       "win_rate": 0.579,
-      "pick_rate": 0.007,
-      "avg_kda": 1.9,
-      "games": 19,
-      "champion": "Kled"
+      "pick_rate": 0.012,
+      "avg_kda": 2.15,
+      "games": 38,
+      "champion": "Zed"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.574,
+      "pick_rate": 0.022,
+      "avg_kda": 1.51,
+      "games": 68,
+      "champion": "Fiora"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 8,
+      "win_rate": 0.571,
+      "pick_rate": 0.005,
+      "avg_kda": 2.51,
+      "games": 14,
+      "champion": "Akshan"
     },
     {
       "team_position": "TOP",
@@ -156,339 +166,349 @@
       "wins": 12,
       "win_rate": 0.571,
       "pick_rate": 0.007,
-      "avg_kda": 2.12,
+      "avg_kda": 2.64,
       "games": 21,
-      "champion": "Poppy"
+      "champion": "Ahri"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 48,
-      "win_rate": 0.565,
-      "pick_rate": 0.03,
-      "avg_kda": 1.77,
-      "games": 85,
-      "champion": "DrMundo"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 9,
+      "wins": 36,
       "win_rate": 0.562,
-      "pick_rate": 0.006,
-      "avg_kda": 2.05,
-      "games": 16,
-      "champion": "Kalista"
+      "pick_rate": 0.021,
+      "avg_kda": 1.85,
+      "games": 64,
+      "champion": "Yorick"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 76,
-      "win_rate": 0.559,
-      "pick_rate": 0.049,
-      "avg_kda": 2.04,
-      "games": 136,
-      "champion": "Gnar"
+      "wins": 59,
+      "win_rate": 0.551,
+      "pick_rate": 0.035,
+      "avg_kda": 2.08,
+      "games": 107,
+      "champion": "Gangplank"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 20,
-      "win_rate": 0.556,
-      "pick_rate": 0.013,
-      "avg_kda": 1.75,
-      "games": 36,
-      "champion": "Volibear"
+      "wins": 59,
+      "win_rate": 0.551,
+      "pick_rate": 0.035,
+      "avg_kda": 3.01,
+      "games": 107,
+      "champion": "Shen"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.545,
+      "pick_rate": 0.004,
+      "avg_kda": 1.67,
+      "games": 11,
+      "champion": "Udyr"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 12,
+      "win_rate": 0.545,
+      "pick_rate": 0.007,
+      "avg_kda": 1.81,
+      "games": 22,
+      "champion": "Heimerdinger"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.545,
+      "pick_rate": 0.004,
+      "avg_kda": 1.28,
+      "games": 11,
+      "champion": "Smolder"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 43,
       "win_rate": 0.544,
-      "pick_rate": 0.028,
-      "avg_kda": 1.81,
+      "pick_rate": 0.026,
+      "avg_kda": 2.16,
       "games": 79,
-      "champion": "Riven"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 138,
-      "win_rate": 0.541,
-      "pick_rate": 0.091,
-      "avg_kda": 2.01,
-      "games": 255,
-      "champion": "Jayce"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 53,
-      "win_rate": 0.541,
-      "pick_rate": 0.035,
-      "avg_kda": 1.62,
-      "games": 98,
-      "champion": "Yasuo"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 102,
-      "win_rate": 0.531,
-      "pick_rate": 0.068,
-      "avg_kda": 1.78,
-      "games": 192,
-      "champion": "Vayne"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 80,
-      "win_rate": 0.53,
-      "pick_rate": 0.054,
-      "avg_kda": 1.74,
-      "games": 151,
-      "champion": "Varus"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 65,
-      "win_rate": 0.528,
-      "pick_rate": 0.044,
-      "avg_kda": 1.98,
-      "games": 123,
-      "champion": "Camille"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.526,
-      "pick_rate": 0.007,
-      "avg_kda": 1.77,
-      "games": 19,
-      "champion": "Heimerdinger"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.526,
-      "pick_rate": 0.007,
-      "avg_kda": 1.87,
-      "games": 19,
-      "champion": "Brand"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 65,
-      "win_rate": 0.524,
-      "pick_rate": 0.044,
-      "avg_kda": 1.7,
-      "games": 124,
-      "champion": "Jax"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 55,
-      "win_rate": 0.524,
-      "pick_rate": 0.037,
-      "avg_kda": 1.91,
-      "games": 105,
-      "champion": "Aatrox"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 49,
-      "win_rate": 0.521,
-      "pick_rate": 0.034,
-      "avg_kda": 2.17,
-      "games": 94,
       "champion": "Pantheon"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 15,
-      "win_rate": 0.517,
-      "pick_rate": 0.01,
-      "avg_kda": 2.72,
-      "games": 29,
-      "champion": "Annie"
+      "wins": 19,
+      "win_rate": 0.543,
+      "pick_rate": 0.011,
+      "avg_kda": 1.47,
+      "games": 35,
+      "champion": "Sett"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 54,
-      "win_rate": 0.514,
-      "pick_rate": 0.037,
-      "avg_kda": 1.91,
-      "games": 105,
-      "champion": "Cassiopeia"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 37,
-      "win_rate": 0.514,
-      "pick_rate": 0.026,
-      "avg_kda": 2.14,
-      "games": 72,
-      "champion": "Akali"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 56,
-      "win_rate": 0.514,
-      "pick_rate": 0.039,
-      "avg_kda": 1.71,
-      "games": 109,
-      "champion": "Garen"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 42,
-      "win_rate": 0.512,
-      "pick_rate": 0.029,
-      "avg_kda": 1.42,
-      "games": 82,
-      "champion": "XinZhao"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 69,
-      "win_rate": 0.511,
-      "pick_rate": 0.048,
+      "wins": 44,
+      "win_rate": 0.537,
+      "pick_rate": 0.027,
       "avg_kda": 2.55,
-      "games": 135,
-      "champion": "Ornn"
+      "games": 82,
+      "champion": "Aurora"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 119,
-      "win_rate": 0.509,
-      "pick_rate": 0.083,
-      "avg_kda": 2.21,
-      "games": 234,
-      "champion": "Sion"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 102,
-      "win_rate": 0.507,
-      "pick_rate": 0.072,
-      "avg_kda": 2.43,
-      "games": 201,
-      "champion": "Malphite"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 45,
-      "win_rate": 0.506,
-      "pick_rate": 0.032,
-      "avg_kda": 2.04,
-      "games": 89,
-      "champion": "Gangplank"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 69,
-      "win_rate": 0.5,
-      "pick_rate": 0.049,
-      "avg_kda": 2.35,
-      "games": 138,
-      "champion": "Singed"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 23,
-      "win_rate": 0.5,
-      "pick_rate": 0.016,
-      "avg_kda": 1.42,
-      "games": 46,
-      "champion": "Warwick"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 1.33,
-      "games": 12,
-      "champion": "Malzahar"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.5,
-      "pick_rate": 0.009,
-      "avg_kda": 1.84,
-      "games": 26,
-      "champion": "Naafiri"
+      "wins": 71,
+      "win_rate": 0.53,
+      "pick_rate": 0.043,
+      "avg_kda": 2.34,
+      "games": 134,
+      "champion": "Rumble"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 9,
-      "win_rate": 0.5,
-      "pick_rate": 0.006,
-      "avg_kda": 2.59,
-      "games": 18,
-      "champion": "Karma"
+      "win_rate": 0.529,
+      "pick_rate": 0.005,
+      "avg_kda": 2.45,
+      "games": 17,
+      "champion": "Zac"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 9,
+      "win_rate": 0.529,
+      "pick_rate": 0.005,
+      "avg_kda": 2.28,
+      "games": 17,
+      "champion": "Ekko"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 19,
-      "win_rate": 0.5,
-      "pick_rate": 0.014,
-      "avg_kda": 1.98,
-      "games": 38,
-      "champion": "Nasus"
+      "win_rate": 0.528,
+      "pick_rate": 0.012,
+      "avg_kda": 1.54,
+      "games": 36,
+      "champion": "Trundle"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.5,
-      "pick_rate": 0.009,
-      "avg_kda": 2.09,
-      "games": 24,
-      "champion": "Ahri"
+      "wins": 30,
+      "win_rate": 0.526,
+      "pick_rate": 0.018,
+      "avg_kda": 2.04,
+      "games": 57,
+      "champion": "Kennen"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 76,
+      "win_rate": 0.524,
+      "pick_rate": 0.047,
+      "avg_kda": 1.89,
+      "games": 145,
+      "champion": "Aatrox"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 48,
+      "win_rate": 0.522,
+      "pick_rate": 0.03,
+      "avg_kda": 2.0,
+      "games": 92,
+      "champion": "Riven"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 90,
+      "win_rate": 0.52,
+      "pick_rate": 0.056,
+      "avg_kda": 2.07,
+      "games": 173,
+      "champion": "Ambessa"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 13,
+      "win_rate": 0.52,
+      "pick_rate": 0.008,
+      "avg_kda": 1.86,
+      "games": 25,
+      "champion": "Shyvana"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 73,
+      "win_rate": 0.518,
+      "pick_rate": 0.046,
+      "avg_kda": 1.94,
+      "games": 141,
+      "champion": "Singed"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 65,
+      "win_rate": 0.516,
+      "pick_rate": 0.041,
+      "avg_kda": 1.59,
+      "games": 126,
+      "champion": "Irelia"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 33,
+      "win_rate": 0.516,
+      "pick_rate": 0.021,
+      "avg_kda": 1.64,
+      "games": 64,
+      "champion": "TwistedFate"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.514,
+      "pick_rate": 0.045,
+      "avg_kda": 1.65,
+      "games": 138,
+      "champion": "Garen"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.513,
+      "pick_rate": 0.025,
+      "avg_kda": 1.41,
+      "games": 76,
+      "champion": "XinZhao"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 100,
+      "win_rate": 0.513,
+      "pick_rate": 0.063,
+      "avg_kda": 1.72,
+      "games": 195,
+      "champion": "Vayne"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 43,
+      "win_rate": 0.512,
+      "pick_rate": 0.027,
+      "avg_kda": 2.19,
+      "games": 84,
+      "champion": "Anivia"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.51,
+      "pick_rate": 0.016,
+      "avg_kda": 1.8,
+      "games": 51,
+      "champion": "Zaahen"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 80,
+      "win_rate": 0.51,
+      "pick_rate": 0.051,
+      "avg_kda": 1.75,
+      "games": 157,
+      "champion": "Varus"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 85,
+      "win_rate": 0.506,
+      "pick_rate": 0.054,
+      "avg_kda": 1.88,
+      "games": 168,
+      "champion": "Renekton"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 5,
       "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 2.5,
+      "pick_rate": 0.003,
+      "avg_kda": 2.52,
       "games": 10,
-      "champion": "Galio"
+      "champion": "Skarner"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 29,
+      "wins": 62,
       "win_rate": 0.5,
-      "pick_rate": 0.021,
-      "avg_kda": 1.42,
-      "games": 58,
-      "champion": "Fiora"
+      "pick_rate": 0.04,
+      "avg_kda": 1.96,
+      "games": 124,
+      "champion": "Cassiopeia"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 51,
+      "win_rate": 0.5,
+      "pick_rate": 0.033,
+      "avg_kda": 2.0,
+      "games": 102,
+      "champion": "Akali"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 82,
+      "win_rate": 0.5,
+      "pick_rate": 0.053,
+      "avg_kda": 2.1,
+      "games": 164,
+      "champion": "Malphite"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.5,
+      "pick_rate": 0.007,
+      "avg_kda": 2.01,
+      "games": 22,
+      "champion": "Qiyana"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.5,
+      "pick_rate": 0.017,
+      "avg_kda": 2.04,
+      "games": 52,
+      "champion": "Vladimir"
     },
     {
       "team_position": "TOP",
@@ -496,1623 +516,1653 @@
       "wins": 6,
       "win_rate": 0.5,
       "pick_rate": 0.004,
-      "avg_kda": 2.14,
+      "avg_kda": 1.48,
       "games": 12,
-      "champion": "Karthus"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.5,
-      "pick_rate": 0.023,
-      "avg_kda": 1.74,
-      "games": 64,
-      "champion": "Teemo"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 31,
-      "win_rate": 0.492,
-      "pick_rate": 0.022,
-      "avg_kda": 2.21,
-      "games": 63,
-      "champion": "Chogath"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 84,
-      "win_rate": 0.491,
-      "pick_rate": 0.061,
-      "avg_kda": 2.13,
-      "games": 171,
-      "champion": "KSante"
+      "champion": "Diana"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 21,
-      "win_rate": 0.488,
-      "pick_rate": 0.015,
-      "avg_kda": 2.43,
-      "games": 43,
-      "champion": "Ryze"
+      "win_rate": 0.5,
+      "pick_rate": 0.014,
+      "avg_kda": 1.85,
+      "games": 42,
+      "champion": "Kled"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.485,
-      "pick_rate": 0.024,
-      "avg_kda": 2.11,
-      "games": 66,
-      "champion": "Vladimir"
+      "wins": 43,
+      "win_rate": 0.489,
+      "pick_rate": 0.028,
+      "avg_kda": 1.42,
+      "games": 88,
+      "champion": "Yasuo"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 47,
-      "win_rate": 0.485,
-      "pick_rate": 0.035,
-      "avg_kda": 1.73,
-      "games": 97,
-      "champion": "Olaf"
+      "wins": 64,
+      "win_rate": 0.489,
+      "pick_rate": 0.042,
+      "avg_kda": 1.59,
+      "games": 131,
+      "champion": "Jax"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.484,
-      "pick_rate": 0.022,
-      "avg_kda": 1.92,
-      "games": 62,
+      "wins": 82,
+      "win_rate": 0.482,
+      "pick_rate": 0.055,
+      "avg_kda": 2.22,
+      "games": 170,
+      "champion": "KSante"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.481,
+      "pick_rate": 0.017,
+      "avg_kda": 1.54,
+      "games": 54,
+      "champion": "Teemo"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 12,
+      "win_rate": 0.48,
+      "pick_rate": 0.008,
+      "avg_kda": 3.1,
+      "games": 25,
+      "champion": "Karma"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 46,
+      "win_rate": 0.479,
+      "pick_rate": 0.031,
+      "avg_kda": 2.12,
+      "games": 96,
       "champion": "Gragas"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.481,
-      "pick_rate": 0.01,
-      "avg_kda": 2.43,
-      "games": 27,
-      "champion": "Akshan"
+      "wins": 129,
+      "win_rate": 0.478,
+      "pick_rate": 0.087,
+      "avg_kda": 2.01,
+      "games": 270,
+      "champion": "Sion"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 42,
-      "win_rate": 0.477,
-      "pick_rate": 0.031,
-      "avg_kda": 2.1,
-      "games": 88,
-      "champion": "Rumble"
+      "wins": 29,
+      "win_rate": 0.475,
+      "pick_rate": 0.02,
+      "avg_kda": 1.68,
+      "games": 61,
+      "champion": "Chogath"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 18,
+      "wins": 81,
       "win_rate": 0.474,
-      "pick_rate": 0.014,
+      "pick_rate": 0.055,
+      "avg_kda": 1.55,
+      "games": 171,
+      "champion": "Yone"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 62,
+      "win_rate": 0.473,
+      "pick_rate": 0.042,
+      "avg_kda": 1.62,
+      "games": 131,
+      "champion": "Olaf"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.467,
+      "pick_rate": 0.01,
       "avg_kda": 1.57,
-      "games": 38,
-      "champion": "Kayle"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 25,
-      "win_rate": 0.472,
-      "pick_rate": 0.019,
-      "avg_kda": 1.5,
-      "games": 53,
-      "champion": "Zaahen"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 48,
-      "win_rate": 0.471,
-      "pick_rate": 0.036,
-      "avg_kda": 2.07,
-      "games": 102,
-      "champion": "Anivia"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 37,
-      "win_rate": 0.463,
-      "pick_rate": 0.029,
-      "avg_kda": 1.63,
-      "games": 80,
-      "champion": "Darius"
+      "games": 30,
+      "champion": "Nasus"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 6,
       "win_rate": 0.462,
-      "pick_rate": 0.005,
-      "avg_kda": 1.3,
+      "pick_rate": 0.004,
+      "avg_kda": 1.91,
       "games": 13,
-      "champion": "Udyr"
+      "champion": "Viktor"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 56,
-      "win_rate": 0.459,
-      "pick_rate": 0.044,
-      "avg_kda": 1.94,
-      "games": 122,
-      "champion": "Renekton"
+      "wins": 12,
+      "win_rate": 0.462,
+      "pick_rate": 0.008,
+      "avg_kda": 1.45,
+      "games": 26,
+      "champion": "Poppy"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 15,
-      "win_rate": 0.455,
-      "pick_rate": 0.012,
-      "avg_kda": 1.99,
-      "games": 33,
-      "champion": "Zed"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 48,
-      "win_rate": 0.453,
-      "pick_rate": 0.038,
-      "avg_kda": 1.29,
-      "games": 106,
-      "champion": "Irelia"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 23,
-      "win_rate": 0.451,
-      "pick_rate": 0.018,
-      "avg_kda": 1.8,
-      "games": 51,
-      "champion": "Urgot"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.444,
-      "pick_rate": 0.006,
-      "avg_kda": 1.67,
-      "games": 18,
-      "champion": "LeeSin"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.444,
-      "pick_rate": 0.026,
-      "avg_kda": 2.48,
-      "games": 72,
-      "champion": "Aurora"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.433,
-      "pick_rate": 0.011,
-      "avg_kda": 1.27,
-      "games": 30,
-      "champion": "Sett"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 19,
-      "win_rate": 0.432,
-      "pick_rate": 0.016,
-      "avg_kda": 1.53,
-      "games": 44,
-      "champion": "Yorick"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.429,
-      "pick_rate": 0.025,
-      "avg_kda": 2.28,
-      "games": 70,
-      "champion": "Shen"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.417,
-      "pick_rate": 0.004,
-      "avg_kda": 1.79,
-      "games": 12,
-      "champion": "AurelionSol"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 56,
-      "win_rate": 0.412,
-      "pick_rate": 0.049,
-      "avg_kda": 1.41,
-      "games": 136,
-      "champion": "Yone"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 54,
-      "win_rate": 0.406,
-      "pick_rate": 0.047,
-      "avg_kda": 1.56,
-      "games": 133,
-      "champion": "Ambessa"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.4,
-      "pick_rate": 0.004,
-      "avg_kda": 2.35,
-      "games": 10,
-      "champion": "Fizz"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.4,
-      "pick_rate": 0.004,
-      "avg_kda": 1.32,
-      "games": 10,
-      "champion": "MasterYi"
+      "wins": 60,
+      "win_rate": 0.462,
+      "pick_rate": 0.042,
+      "avg_kda": 1.9,
+      "games": 130,
+      "champion": "DrMundo"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 6,
-      "win_rate": 0.375,
-      "pick_rate": 0.006,
-      "avg_kda": 1.69,
-      "games": 16,
-      "champion": "TahmKench"
+      "win_rate": 0.462,
+      "pick_rate": 0.004,
+      "avg_kda": 2.37,
+      "games": 13,
+      "champion": "Leblanc"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 113,
+      "win_rate": 0.459,
+      "pick_rate": 0.08,
+      "avg_kda": 1.86,
+      "games": 246,
+      "champion": "Jayce"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 21,
+      "win_rate": 0.457,
+      "pick_rate": 0.015,
+      "avg_kda": 1.36,
+      "games": 46,
+      "champion": "Tryndamere"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 62,
+      "win_rate": 0.456,
+      "pick_rate": 0.044,
+      "avg_kda": 1.88,
+      "games": 136,
+      "champion": "Camille"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 25,
+      "win_rate": 0.455,
+      "pick_rate": 0.018,
+      "avg_kda": 1.8,
+      "games": 55,
+      "champion": "Urgot"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 76,
+      "win_rate": 0.45,
+      "pick_rate": 0.055,
+      "avg_kda": 2.33,
+      "games": 169,
+      "champion": "Ornn"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.429,
+      "pick_rate": 0.005,
+      "avg_kda": 2.08,
+      "games": 14,
+      "champion": "Velkoz"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 63,
+      "win_rate": 0.429,
+      "pick_rate": 0.048,
+      "avg_kda": 1.73,
+      "games": 147,
+      "champion": "Gnar"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 9,
+      "win_rate": 0.429,
+      "pick_rate": 0.007,
+      "avg_kda": 1.55,
+      "games": 21,
+      "champion": "Illaoi"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 16,
+      "win_rate": 0.421,
+      "pick_rate": 0.012,
+      "avg_kda": 1.17,
+      "games": 38,
+      "champion": "Gwen"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.417,
+      "pick_rate": 0.012,
+      "avg_kda": 1.28,
+      "games": 36,
+      "champion": "Volibear"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.412,
+      "pick_rate": 0.005,
+      "avg_kda": 1.9,
+      "games": 17,
+      "champion": "Naafiri"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 41,
+      "win_rate": 0.406,
+      "pick_rate": 0.033,
+      "avg_kda": 1.72,
+      "games": 101,
+      "champion": "Darius"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 4,
-      "win_rate": 0.364,
-      "pick_rate": 0.004,
-      "avg_kda": 1.84,
-      "games": 11,
+      "win_rate": 0.4,
+      "pick_rate": 0.003,
+      "avg_kda": 1.5,
+      "games": 10,
       "champion": "Katarina"
+    },
+    {
+      "team_position": "TOP",
+      "patch": "16.11",
+      "wins": 20,
+      "win_rate": 0.4,
+      "pick_rate": 0.016,
+      "avg_kda": 1.5,
+      "games": 50,
+      "champion": "Mordekaiser"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 11,
       "win_rate": 0.355,
-      "pick_rate": 0.011,
-      "avg_kda": 1.41,
+      "pick_rate": 0.01,
+      "avg_kda": 1.9,
       "games": 31,
-      "champion": "Trundle"
+      "champion": "Ryze"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 22,
-      "win_rate": 0.344,
-      "pick_rate": 0.023,
-      "avg_kda": 1.52,
-      "games": 64,
-      "champion": "TwistedFate"
+      "wins": 5,
+      "win_rate": 0.333,
+      "pick_rate": 0.005,
+      "avg_kda": 1.63,
+      "games": 15,
+      "champion": "Malzahar"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.316,
-      "pick_rate": 0.014,
-      "avg_kda": 1.42,
-      "games": 38,
-      "champion": "Sylas"
+      "wins": 3,
+      "win_rate": 0.3,
+      "pick_rate": 0.003,
+      "avg_kda": 1.41,
+      "games": 10,
+      "champion": "Tristana"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
       "wins": 5,
       "win_rate": 0.294,
-      "pick_rate": 0.006,
-      "avg_kda": 1.29,
-      "games": 17,
-      "champion": "Maokai"
-    },
-    {
-      "team_position": "TOP",
-      "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.267,
       "pick_rate": 0.005,
-      "avg_kda": 1.21,
-      "games": 15,
-      "champion": "KogMaw"
+      "avg_kda": 2.09,
+      "games": 17,
+      "champion": "Zoe"
     },
     {
       "team_position": "TOP",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.25,
-      "pick_rate": 0.007,
-      "avg_kda": 1.62,
-      "games": 20,
-      "champion": "Qiyana"
+      "wins": 2,
+      "win_rate": 0.167,
+      "pick_rate": 0.004,
+      "avg_kda": 1.28,
+      "games": 12,
+      "champion": "MonkeyKing"
     }
   ],
   "JUNGLE": [
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.7,
-      "pick_rate": 0.004,
-      "avg_kda": 3.3,
-      "games": 10,
-      "champion": "Poppy"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 18,
-      "win_rate": 0.692,
-      "pick_rate": 0.009,
-      "avg_kda": 4.55,
-      "games": 26,
-      "champion": "Zac"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 17,
-      "win_rate": 0.654,
-      "pick_rate": 0.009,
-      "avg_kda": 3.73,
-      "games": 26,
-      "champion": "Nasus"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 27,
-      "win_rate": 0.643,
-      "pick_rate": 0.015,
-      "avg_kda": 3.06,
-      "games": 42,
-      "champion": "FiddleSticks"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.636,
-      "pick_rate": 0.004,
-      "avg_kda": 4.12,
-      "games": 11,
-      "champion": "Shen"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 40,
-      "win_rate": 0.635,
-      "pick_rate": 0.022,
-      "avg_kda": 3.62,
-      "games": 63,
-      "champion": "Taliyah"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 91,
-      "win_rate": 0.595,
-      "pick_rate": 0.055,
-      "avg_kda": 3.9,
-      "games": 153,
-      "champion": "Shaco"
+      "wins": 32,
+      "win_rate": 0.615,
+      "pick_rate": 0.017,
+      "avg_kda": 3.34,
+      "games": 52,
+      "champion": "Evelynn"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
       "wins": 54,
-      "win_rate": 0.581,
-      "pick_rate": 0.033,
-      "avg_kda": 3.09,
-      "games": 93,
-      "champion": "Udyr"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 15,
-      "win_rate": 0.556,
-      "pick_rate": 0.01,
-      "avg_kda": 2.44,
-      "games": 27,
-      "champion": "Zed"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 49,
-      "win_rate": 0.538,
-      "pick_rate": 0.032,
-      "avg_kda": 3.27,
-      "games": 91,
-      "champion": "Jayce"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 63,
-      "win_rate": 0.538,
-      "pick_rate": 0.042,
-      "avg_kda": 3.84,
-      "games": 117,
-      "champion": "Skarner"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 63,
-      "win_rate": 0.538,
-      "pick_rate": 0.042,
-      "avg_kda": 3.66,
-      "games": 117,
-      "champion": "Nidalee"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 59,
-      "win_rate": 0.536,
-      "pick_rate": 0.039,
-      "avg_kda": 3.03,
-      "games": 110,
-      "champion": "Ekko"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.533,
-      "pick_rate": 0.005,
-      "avg_kda": 2.26,
-      "games": 15,
-      "champion": "Olaf"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 34,
-      "win_rate": 0.531,
-      "pick_rate": 0.023,
-      "avg_kda": 3.45,
-      "games": 64,
+      "win_rate": 0.6,
+      "pick_rate": 0.029,
+      "avg_kda": 3.07,
+      "games": 90,
       "champion": "Aatrox"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.529,
+      "wins": 6,
+      "win_rate": 0.6,
+      "pick_rate": 0.003,
+      "avg_kda": 2.75,
+      "games": 10,
+      "champion": "Morgana"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.6,
+      "pick_rate": 0.021,
+      "avg_kda": 3.48,
+      "games": 65,
+      "champion": "Zyra"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 12,
+      "win_rate": 0.6,
       "pick_rate": 0.006,
-      "avg_kda": 2.84,
-      "games": 17,
-      "champion": "Gwen"
+      "avg_kda": 4.21,
+      "games": 20,
+      "champion": "Trundle"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.526,
-      "pick_rate": 0.007,
-      "avg_kda": 2.93,
-      "games": 19,
-      "champion": "Chogath"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 115,
-      "win_rate": 0.525,
-      "pick_rate": 0.078,
-      "avg_kda": 2.58,
-      "games": 219,
-      "champion": "Khazix"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 217,
-      "win_rate": 0.524,
-      "pick_rate": 0.148,
-      "avg_kda": 3.39,
-      "games": 414,
-      "champion": "LeeSin"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 106,
-      "win_rate": 0.522,
-      "pick_rate": 0.072,
-      "avg_kda": 2.66,
-      "games": 203,
-      "champion": "Diana"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 59,
-      "win_rate": 0.522,
-      "pick_rate": 0.04,
-      "avg_kda": 4.43,
-      "games": 113,
-      "champion": "Ivern"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 26,
-      "win_rate": 0.52,
-      "pick_rate": 0.018,
-      "avg_kda": 2.82,
-      "games": 50,
-      "champion": "Belveth"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 28,
-      "win_rate": 0.519,
-      "pick_rate": 0.019,
-      "avg_kda": 2.38,
-      "games": 54,
-      "champion": "Briar"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 72,
-      "win_rate": 0.518,
-      "pick_rate": 0.05,
-      "avg_kda": 2.95,
-      "games": 139,
-      "champion": "Sylas"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 59,
-      "win_rate": 0.518,
-      "pick_rate": 0.041,
-      "avg_kda": 2.98,
-      "games": 114,
-      "champion": "RekSai"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 134,
-      "win_rate": 0.517,
-      "pick_rate": 0.092,
-      "avg_kda": 3.43,
-      "games": 259,
-      "champion": "JarvanIV"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 66,
-      "win_rate": 0.516,
-      "pick_rate": 0.046,
-      "avg_kda": 2.88,
-      "games": 128,
-      "champion": "XinZhao"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 35,
-      "win_rate": 0.515,
-      "pick_rate": 0.024,
-      "avg_kda": 2.46,
-      "games": 68,
-      "champion": "Karthus"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 66,
-      "win_rate": 0.508,
-      "pick_rate": 0.046,
-      "avg_kda": 2.39,
-      "games": 130,
-      "champion": "Rengar"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 176,
-      "win_rate": 0.507,
-      "pick_rate": 0.124,
-      "avg_kda": 2.8,
-      "games": 347,
-      "champion": "Graves"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 45,
-      "win_rate": 0.506,
-      "pick_rate": 0.032,
-      "avg_kda": 3.5,
-      "games": 89,
-      "champion": "Nunu"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 3.09,
+      "wins": 6,
+      "win_rate": 0.6,
+      "pick_rate": 0.003,
+      "avg_kda": 2.71,
       "games": 10,
       "champion": "Riven"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.5,
+      "wins": 17,
+      "win_rate": 0.586,
+      "pick_rate": 0.009,
+      "avg_kda": 5.04,
+      "games": 29,
+      "champion": "Nasus"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 17,
+      "win_rate": 0.586,
+      "pick_rate": 0.009,
+      "avg_kda": 2.87,
+      "games": 29,
+      "champion": "Zaahen"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 40,
+      "win_rate": 0.58,
+      "pick_rate": 0.022,
+      "avg_kda": 3.23,
+      "games": 69,
+      "champion": "Pantheon"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 41,
+      "win_rate": 0.562,
+      "pick_rate": 0.024,
+      "avg_kda": 2.79,
+      "games": 73,
+      "champion": "Kindred"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 65,
+      "win_rate": 0.556,
+      "pick_rate": 0.038,
+      "avg_kda": 2.91,
+      "games": 117,
+      "champion": "Nocturne"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 21,
+      "win_rate": 0.553,
+      "pick_rate": 0.012,
+      "avg_kda": 2.25,
+      "games": 38,
+      "champion": "FiddleSticks"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 55,
+      "win_rate": 0.55,
+      "pick_rate": 0.032,
+      "avg_kda": 3.13,
+      "games": 100,
+      "champion": "Ekko"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 62,
+      "win_rate": 0.549,
+      "pick_rate": 0.037,
+      "avg_kda": 3.79,
+      "games": 113,
+      "champion": "Nunu"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 37,
+      "win_rate": 0.544,
+      "pick_rate": 0.022,
+      "avg_kda": 3.13,
+      "games": 68,
+      "champion": "Belveth"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 135,
+      "win_rate": 0.542,
+      "pick_rate": 0.081,
+      "avg_kda": 2.97,
+      "games": 249,
+      "champion": "Hecarim"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 52,
+      "win_rate": 0.542,
+      "pick_rate": 0.031,
+      "avg_kda": 2.88,
+      "games": 96,
+      "champion": "Elise"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 78,
+      "win_rate": 0.542,
+      "pick_rate": 0.047,
+      "avg_kda": 2.67,
+      "games": 144,
+      "champion": "XinZhao"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.538,
       "pick_rate": 0.004,
-      "avg_kda": 4.05,
-      "games": 12,
-      "champion": "Malphite"
+      "avg_kda": 3.56,
+      "games": 13,
+      "champion": "Poppy"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 56,
+      "win_rate": 0.533,
+      "pick_rate": 0.034,
+      "avg_kda": 2.77,
+      "games": 105,
+      "champion": "Kayn"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 67,
+      "win_rate": 0.528,
+      "pick_rate": 0.041,
+      "avg_kda": 3.81,
+      "games": 127,
+      "champion": "Skarner"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 33,
+      "win_rate": 0.524,
+      "pick_rate": 0.02,
+      "avg_kda": 2.47,
+      "games": 63,
+      "champion": "Briar"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.522,
+      "pick_rate": 0.044,
+      "avg_kda": 3.02,
+      "games": 136,
+      "champion": "MonkeyKing"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 12,
+      "win_rate": 0.522,
+      "pick_rate": 0.007,
+      "avg_kda": 3.3,
+      "games": 23,
+      "champion": "DrMundo"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 56,
+      "win_rate": 0.519,
+      "pick_rate": 0.035,
+      "avg_kda": 2.57,
+      "games": 108,
+      "champion": "Vi"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.519,
+      "pick_rate": 0.009,
+      "avg_kda": 3.21,
+      "games": 27,
+      "champion": "Darius"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 43,
+      "win_rate": 0.518,
+      "pick_rate": 0.027,
+      "avg_kda": 2.97,
+      "games": 83,
+      "champion": "Udyr"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 82,
+      "win_rate": 0.512,
+      "pick_rate": 0.052,
+      "avg_kda": 3.72,
+      "games": 160,
+      "champion": "Nidalee"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 87,
+      "win_rate": 0.509,
+      "pick_rate": 0.055,
+      "avg_kda": 3.04,
+      "games": 171,
+      "champion": "Shaco"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 36,
+      "win_rate": 0.507,
+      "pick_rate": 0.023,
+      "avg_kda": 2.82,
+      "games": 71,
+      "champion": "Jayce"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 167,
+      "win_rate": 0.505,
+      "pick_rate": 0.107,
+      "avg_kda": 3.35,
+      "games": 331,
+      "champion": "JarvanIV"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 211,
+      "win_rate": 0.504,
+      "pick_rate": 0.136,
+      "avg_kda": 2.72,
+      "games": 419,
+      "champion": "Graves"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 223,
+      "win_rate": 0.501,
+      "pick_rate": 0.144,
+      "avg_kda": 3.34,
+      "games": 445,
+      "champion": "LeeSin"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
       "wins": 12,
       "win_rate": 0.5,
-      "pick_rate": 0.009,
-      "avg_kda": 4.66,
+      "pick_rate": 0.008,
+      "avg_kda": 3.03,
       "games": 24,
-      "champion": "Sejuani"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.5,
-      "pick_rate": 0.005,
-      "avg_kda": 4.5,
-      "games": 14,
-      "champion": "DrMundo"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.5,
-      "pick_rate": 0.006,
-      "avg_kda": 3.38,
-      "games": 16,
-      "champion": "Gragas"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 1.98,
-      "games": 10,
-      "champion": "Jax"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 44,
-      "win_rate": 0.494,
-      "pick_rate": 0.032,
-      "avg_kda": 3.04,
-      "games": 89,
-      "champion": "Elise"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 61,
-      "win_rate": 0.492,
-      "pick_rate": 0.044,
-      "avg_kda": 3.02,
-      "games": 124,
-      "champion": "MonkeyKing"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 57,
-      "win_rate": 0.491,
-      "pick_rate": 0.041,
-      "avg_kda": 2.84,
-      "games": 116,
-      "champion": "Kayn"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 95,
-      "win_rate": 0.49,
-      "pick_rate": 0.069,
-      "avg_kda": 2.67,
-      "games": 194,
-      "champion": "Viego"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 46,
-      "win_rate": 0.479,
-      "pick_rate": 0.034,
-      "avg_kda": 2.35,
-      "games": 96,
-      "champion": "MasterYi"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.471,
-      "pick_rate": 0.012,
-      "avg_kda": 2.36,
-      "games": 34,
-      "champion": "Brand"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 22,
-      "win_rate": 0.468,
-      "pick_rate": 0.017,
-      "avg_kda": 2.82,
-      "games": 47,
-      "champion": "Lillia"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 40,
-      "win_rate": 0.465,
-      "pick_rate": 0.031,
-      "avg_kda": 2.48,
-      "games": 86,
-      "champion": "Shyvana"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.464,
-      "pick_rate": 0.01,
-      "avg_kda": 2.47,
-      "games": 28,
-      "champion": "Darius"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 88,
-      "win_rate": 0.463,
-      "pick_rate": 0.068,
-      "avg_kda": 2.75,
-      "games": 190,
-      "champion": "Hecarim"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 36,
-      "win_rate": 0.456,
-      "pick_rate": 0.028,
-      "avg_kda": 2.51,
-      "games": 79,
-      "champion": "Kindred"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.455,
-      "pick_rate": 0.024,
-      "avg_kda": 2.4,
-      "games": 66,
-      "champion": "Evelynn"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 55,
-      "win_rate": 0.444,
-      "pick_rate": 0.044,
-      "avg_kda": 2.83,
-      "games": 124,
-      "champion": "Nocturne"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 77,
-      "win_rate": 0.44,
-      "pick_rate": 0.062,
-      "avg_kda": 2.71,
-      "games": 175,
-      "champion": "Naafiri"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.435,
-      "pick_rate": 0.025,
-      "avg_kda": 2.21,
-      "games": 69,
-      "champion": "Qiyana"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.435,
-      "pick_rate": 0.025,
-      "avg_kda": 2.7,
-      "games": 69,
-      "champion": "Vi"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 89,
-      "win_rate": 0.432,
-      "pick_rate": 0.073,
-      "avg_kda": 2.68,
-      "games": 206,
-      "champion": "Talon"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 44,
-      "win_rate": 0.431,
-      "pick_rate": 0.036,
-      "avg_kda": 2.39,
-      "games": 102,
-      "champion": "Quinn"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.4,
-      "pick_rate": 0.005,
-      "avg_kda": 2.67,
-      "games": 15,
-      "champion": "Zaahen"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 17,
-      "win_rate": 0.386,
-      "pick_rate": 0.016,
-      "avg_kda": 2.7,
-      "games": 44,
-      "champion": "Zyra"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 29,
-      "win_rate": 0.341,
-      "pick_rate": 0.03,
-      "avg_kda": 2.39,
-      "games": 85,
-      "champion": "Ambessa"
-    },
-    {
-      "team_position": "JUNGLE",
-      "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.333,
-      "pick_rate": 0.004,
-      "avg_kda": 1.76,
-      "games": 12,
-      "champion": "Volibear"
+      "champion": "Fizz"
     },
     {
       "team_position": "JUNGLE",
       "patch": "16.11",
       "wins": 18,
-      "win_rate": 0.321,
-      "pick_rate": 0.02,
-      "avg_kda": 2.43,
-      "games": 56,
-      "champion": "Pantheon"
+      "win_rate": 0.5,
+      "pick_rate": 0.012,
+      "avg_kda": 2.53,
+      "games": 36,
+      "champion": "Zac"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 40,
+      "win_rate": 0.5,
+      "pick_rate": 0.026,
+      "avg_kda": 3.06,
+      "games": 80,
+      "champion": "Taliyah"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.5,
+      "pick_rate": 0.006,
+      "avg_kda": 2.54,
+      "games": 20,
+      "champion": "Olaf"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.5,
+      "pick_rate": 0.004,
+      "avg_kda": 3.81,
+      "games": 12,
+      "champion": "Rammus"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.497,
+      "pick_rate": 0.046,
+      "avg_kda": 3.38,
+      "games": 143,
+      "champion": "RekSai"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 100,
+      "win_rate": 0.495,
+      "pick_rate": 0.065,
+      "avg_kda": 2.67,
+      "games": 202,
+      "champion": "Viego"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 60,
+      "win_rate": 0.488,
+      "pick_rate": 0.04,
+      "avg_kda": 4.39,
+      "games": 123,
+      "champion": "Ivern"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 114,
+      "win_rate": 0.485,
+      "pick_rate": 0.076,
+      "avg_kda": 2.72,
+      "games": 235,
+      "champion": "Khazix"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 16,
+      "win_rate": 0.485,
+      "pick_rate": 0.011,
+      "avg_kda": 3.68,
+      "games": 33,
+      "champion": "Sejuani"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.478,
+      "pick_rate": 0.007,
+      "avg_kda": 2.75,
+      "games": 23,
+      "champion": "Brand"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 30,
+      "win_rate": 0.469,
+      "pick_rate": 0.021,
+      "avg_kda": 2.6,
+      "games": 64,
+      "champion": "Karthus"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 62,
+      "win_rate": 0.466,
+      "pick_rate": 0.043,
+      "avg_kda": 2.37,
+      "games": 133,
+      "champion": "Rengar"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.464,
+      "pick_rate": 0.027,
+      "avg_kda": 2.39,
+      "games": 84,
+      "champion": "MasterYi"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 87,
+      "win_rate": 0.463,
+      "pick_rate": 0.061,
+      "avg_kda": 2.85,
+      "games": 188,
+      "champion": "Naafiri"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.455,
+      "pick_rate": 0.004,
+      "avg_kda": 2.46,
+      "games": 11,
+      "champion": "Warwick"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 35,
+      "win_rate": 0.455,
+      "pick_rate": 0.025,
+      "avg_kda": 2.52,
+      "games": 77,
+      "champion": "Ambessa"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 87,
+      "win_rate": 0.453,
+      "pick_rate": 0.062,
+      "avg_kda": 2.46,
+      "games": 192,
+      "champion": "Diana"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 82,
+      "win_rate": 0.451,
+      "pick_rate": 0.059,
+      "avg_kda": 3.04,
+      "games": 182,
+      "champion": "Sylas"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 86,
+      "win_rate": 0.443,
+      "pick_rate": 0.063,
+      "avg_kda": 2.74,
+      "games": 194,
+      "champion": "Talon"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 28,
+      "win_rate": 0.438,
+      "pick_rate": 0.021,
+      "avg_kda": 2.58,
+      "games": 64,
+      "champion": "Shyvana"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 46,
+      "win_rate": 0.411,
+      "pick_rate": 0.036,
+      "avg_kda": 2.31,
+      "games": 112,
+      "champion": "Quinn"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 20,
+      "win_rate": 0.4,
+      "pick_rate": 0.016,
+      "avg_kda": 2.61,
+      "games": 50,
+      "champion": "Qiyana"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.385,
+      "pick_rate": 0.013,
+      "avg_kda": 2.21,
+      "games": 39,
+      "champion": "Zed"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.368,
+      "pick_rate": 0.006,
+      "avg_kda": 2.83,
+      "games": 19,
+      "champion": "Shen"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.357,
+      "pick_rate": 0.005,
+      "avg_kda": 2.4,
+      "games": 14,
+      "champion": "Gwen"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 20,
+      "win_rate": 0.345,
+      "pick_rate": 0.019,
+      "avg_kda": 2.59,
+      "games": 58,
+      "champion": "Lillia"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.294,
+      "pick_rate": 0.005,
+      "avg_kda": 2.29,
+      "games": 17,
+      "champion": "Malphite"
+    },
+    {
+      "team_position": "JUNGLE",
+      "patch": "16.11",
+      "wins": 1,
+      "win_rate": 0.083,
+      "pick_rate": 0.004,
+      "avg_kda": 1.54,
+      "games": 12,
+      "champion": "Amumu"
     }
   ],
   "MIDDLE": [
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.833,
+      "wins": 9,
+      "win_rate": 0.818,
       "pick_rate": 0.004,
-      "avg_kda": 6.97,
-      "games": 12,
-      "champion": "Swain"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.727,
-      "pick_rate": 0.004,
-      "avg_kda": 2.21,
+      "avg_kda": 2.8,
       "games": 11,
-      "champion": "KSante"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.65,
-      "pick_rate": 0.007,
-      "avg_kda": 2.08,
-      "games": 20,
-      "champion": "Talon"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.627,
-      "pick_rate": 0.018,
-      "avg_kda": 2.38,
-      "games": 51,
-      "champion": "Jayce"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 57,
-      "win_rate": 0.626,
-      "pick_rate": 0.032,
-      "avg_kda": 2.43,
-      "games": 91,
-      "champion": "Lissandra"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.615,
-      "pick_rate": 0.005,
-      "avg_kda": 3.19,
-      "games": 13,
-      "champion": "Seraphine"
+      "champion": "Jax"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 16,
-      "win_rate": 0.615,
-      "pick_rate": 0.009,
-      "avg_kda": 1.9,
-      "games": 26,
-      "champion": "Tryndamere"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.6,
-      "pick_rate": 0.005,
-      "avg_kda": 3.63,
-      "games": 15,
-      "champion": "Gangplank"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.6,
+      "win_rate": 0.727,
       "pick_rate": 0.007,
-      "avg_kda": 3.43,
-      "games": 20,
-      "champion": "Singed"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 29,
-      "win_rate": 0.58,
-      "pick_rate": 0.018,
-      "avg_kda": 1.86,
-      "games": 50,
-      "champion": "XinZhao"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 52,
-      "win_rate": 0.578,
-      "pick_rate": 0.032,
-      "avg_kda": 2.16,
-      "games": 90,
-      "champion": "Riven"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.571,
-      "pick_rate": 0.005,
-      "avg_kda": 2.42,
-      "games": 14,
-      "champion": "Nasus"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 24,
-      "win_rate": 0.571,
-      "pick_rate": 0.015,
-      "avg_kda": 2.35,
-      "games": 42,
-      "champion": "Kayle"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.571,
-      "pick_rate": 0.007,
-      "avg_kda": 2.03,
-      "games": 21,
-      "champion": "Rumble"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 90,
-      "win_rate": 0.57,
-      "pick_rate": 0.056,
-      "avg_kda": 2.14,
-      "games": 158,
-      "champion": "Yasuo"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 46,
-      "win_rate": 0.568,
-      "pick_rate": 0.029,
-      "avg_kda": 2.46,
-      "games": 81,
-      "champion": "Fizz"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 107,
-      "win_rate": 0.557,
-      "pick_rate": 0.068,
-      "avg_kda": 2.83,
-      "games": 192,
-      "champion": "Katarina"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 65,
-      "win_rate": 0.551,
-      "pick_rate": 0.042,
-      "avg_kda": 2.62,
-      "games": 118,
-      "champion": "Zoe"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.545,
-      "pick_rate": 0.004,
-      "avg_kda": 2.56,
-      "games": 11,
-      "champion": "Malphite"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.538,
-      "pick_rate": 0.005,
-      "avg_kda": 2.22,
-      "games": 13,
-      "champion": "Vayne"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.538,
-      "pick_rate": 0.005,
-      "avg_kda": 2.19,
-      "games": 13,
-      "champion": "Ezreal"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.538,
-      "pick_rate": 0.005,
-      "avg_kda": 2.26,
-      "games": 13,
-      "champion": "KogMaw"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 28,
-      "win_rate": 0.538,
-      "pick_rate": 0.019,
-      "avg_kda": 3.14,
-      "games": 52,
-      "champion": "Lux"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 15,
-      "win_rate": 0.536,
-      "pick_rate": 0.01,
-      "avg_kda": 2.87,
-      "games": 28,
-      "champion": "Velkoz"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.533,
-      "pick_rate": 0.005,
-      "avg_kda": 2.16,
-      "games": 15,
-      "champion": "Brand"
+      "avg_kda": 3.56,
+      "games": 22,
+      "champion": "Karthus"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 18,
-      "win_rate": 0.529,
-      "pick_rate": 0.012,
-      "avg_kda": 2.81,
+      "win_rate": 0.72,
+      "pick_rate": 0.008,
+      "avg_kda": 2.19,
+      "games": 25,
+      "champion": "Talon"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.7,
+      "pick_rate": 0.003,
+      "avg_kda": 3.52,
+      "games": 10,
+      "champion": "Shen"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.667,
+      "pick_rate": 0.005,
+      "avg_kda": 2.79,
+      "games": 15,
+      "champion": "KSante"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.625,
+      "pick_rate": 0.008,
+      "avg_kda": 3.35,
+      "games": 24,
+      "champion": "Seraphine"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.611,
+      "pick_rate": 0.006,
+      "avg_kda": 3.34,
+      "games": 18,
+      "champion": "Neeko"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.611,
+      "pick_rate": 0.006,
+      "avg_kda": 2.01,
+      "games": 18,
+      "champion": "Ambessa"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.602,
+      "pick_rate": 0.038,
+      "avg_kda": 3.16,
+      "games": 118,
+      "champion": "Vladimir"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.6,
+      "pick_rate": 0.003,
+      "avg_kda": 3.1,
+      "games": 10,
+      "champion": "Morgana"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.588,
+      "pick_rate": 0.005,
+      "avg_kda": 2.71,
+      "games": 17,
+      "champion": "Pantheon"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 54,
+      "win_rate": 0.587,
+      "pick_rate": 0.03,
+      "avg_kda": 2.57,
+      "games": 92,
+      "champion": "Jayce"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 8,
+      "win_rate": 0.571,
+      "pick_rate": 0.005,
+      "avg_kda": 2.21,
+      "games": 14,
+      "champion": "Ezreal"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 9,
+      "win_rate": 0.562,
+      "pick_rate": 0.005,
+      "avg_kda": 2.63,
+      "games": 16,
+      "champion": "Gragas"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.56,
+      "pick_rate": 0.008,
+      "avg_kda": 1.95,
+      "games": 25,
+      "champion": "Brand"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 19,
+      "win_rate": 0.559,
+      "pick_rate": 0.011,
+      "avg_kda": 3.71,
       "games": 34,
       "champion": "Chogath"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 99,
-      "win_rate": 0.527,
-      "pick_rate": 0.067,
-      "avg_kda": 2.13,
-      "games": 188,
-      "champion": "Viktor"
+      "wins": 82,
+      "win_rate": 0.558,
+      "pick_rate": 0.048,
+      "avg_kda": 2.62,
+      "games": 147,
+      "champion": "Ekko"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.556,
+      "pick_rate": 0.006,
+      "avg_kda": 1.79,
+      "games": 18,
+      "champion": "Tryndamere"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.556,
+      "pick_rate": 0.009,
+      "avg_kda": 3.28,
+      "games": 27,
+      "champion": "Swain"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.553,
+      "pick_rate": 0.015,
+      "avg_kda": 2.35,
+      "games": 47,
+      "champion": "Mel"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 92,
+      "win_rate": 0.551,
+      "pick_rate": 0.054,
+      "avg_kda": 2.7,
+      "games": 167,
+      "champion": "Aurora"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.55,
+      "pick_rate": 0.006,
+      "avg_kda": 3.96,
+      "games": 20,
+      "champion": "Zilean"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 47,
+      "win_rate": 0.547,
+      "pick_rate": 0.028,
+      "avg_kda": 2.28,
+      "games": 86,
+      "champion": "Annie"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 59,
+      "win_rate": 0.546,
+      "pick_rate": 0.035,
+      "avg_kda": 2.79,
+      "games": 108,
+      "champion": "Taliyah"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 36,
+      "win_rate": 0.545,
+      "pick_rate": 0.021,
+      "avg_kda": 1.68,
+      "games": 66,
+      "champion": "XinZhao"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 215,
+      "win_rate": 0.54,
+      "pick_rate": 0.129,
+      "avg_kda": 2.86,
+      "games": 398,
+      "champion": "Ahri"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.538,
+      "pick_rate": 0.004,
+      "avg_kda": 2.25,
+      "games": 13,
+      "champion": "Olaf"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.538,
+      "pick_rate": 0.004,
+      "avg_kda": 2.29,
+      "games": 13,
+      "champion": "DrMundo"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 56,
+      "win_rate": 0.538,
+      "pick_rate": 0.034,
+      "avg_kda": 2.5,
+      "games": 104,
+      "champion": "Fizz"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 36,
+      "win_rate": 0.529,
+      "pick_rate": 0.022,
+      "avg_kda": 1.99,
+      "games": 68,
+      "champion": "Malzahar"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 63,
+      "win_rate": 0.521,
+      "pick_rate": 0.039,
+      "avg_kda": 2.74,
+      "games": 121,
+      "champion": "TwistedFate"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 92,
+      "win_rate": 0.52,
+      "pick_rate": 0.057,
+      "avg_kda": 2.35,
+      "games": 177,
+      "champion": "Akali"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 54,
       "win_rate": 0.519,
-      "pick_rate": 0.037,
-      "avg_kda": 2.7,
+      "pick_rate": 0.034,
+      "avg_kda": 1.66,
       "games": 104,
-      "champion": "Taliyah"
+      "champion": "Irelia"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 61,
-      "win_rate": 0.517,
-      "pick_rate": 0.042,
-      "avg_kda": 2.59,
-      "games": 118,
-      "champion": "TwistedFate"
+      "wins": 101,
+      "win_rate": 0.513,
+      "pick_rate": 0.064,
+      "avg_kda": 2.09,
+      "games": 197,
+      "champion": "Sylas"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 94,
+      "wins": 23,
       "win_rate": 0.511,
-      "pick_rate": 0.066,
-      "avg_kda": 2.23,
-      "games": 184,
-      "champion": "Syndra"
+      "pick_rate": 0.015,
+      "avg_kda": 2.36,
+      "games": 45,
+      "champion": "Vex"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 29,
+      "wins": 130,
+      "win_rate": 0.51,
+      "pick_rate": 0.082,
+      "avg_kda": 2.36,
+      "games": 255,
+      "champion": "Viktor"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 81,
       "win_rate": 0.509,
-      "pick_rate": 0.02,
-      "avg_kda": 3.03,
-      "games": 57,
-      "champion": "AurelionSol"
+      "pick_rate": 0.051,
+      "avg_kda": 3.05,
+      "games": 159,
+      "champion": "Orianna"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 90,
+      "wins": 62,
       "win_rate": 0.508,
-      "pick_rate": 0.063,
-      "avg_kda": 2.1,
-      "games": 177,
-      "champion": "Zed"
+      "pick_rate": 0.039,
+      "avg_kda": 2.76,
+      "games": 122,
+      "champion": "Anivia"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 39,
-      "win_rate": 0.506,
-      "pick_rate": 0.027,
-      "avg_kda": 2.48,
-      "games": 77,
-      "champion": "Hwei"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 86,
-      "win_rate": 0.506,
-      "pick_rate": 0.061,
-      "avg_kda": 2.55,
-      "games": 170,
-      "champion": "Akali"
+      "wins": 75,
+      "win_rate": 0.507,
+      "pick_rate": 0.048,
+      "avg_kda": 2.97,
+      "games": 148,
+      "champion": "Galio"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 57,
       "win_rate": 0.504,
-      "pick_rate": 0.04,
-      "avg_kda": 2.98,
-      "games": 113,
-      "champion": "Galio"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.5,
-      "pick_rate": 0.005,
-      "avg_kda": 2.12,
-      "games": 14,
-      "champion": "Garen"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 64,
-      "win_rate": 0.5,
-      "pick_rate": 0.046,
-      "avg_kda": 2.3,
-      "games": 128,
-      "champion": "Ekko"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 81,
-      "win_rate": 0.5,
-      "pick_rate": 0.058,
-      "avg_kda": 2.72,
-      "games": 162,
-      "champion": "Orianna"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 80,
-      "win_rate": 0.497,
-      "pick_rate": 0.057,
-      "avg_kda": 1.62,
-      "games": 161,
-      "champion": "Yone"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 44,
-      "win_rate": 0.494,
-      "pick_rate": 0.032,
-      "avg_kda": 2.23,
-      "games": 89,
-      "champion": "Kassadin"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 82,
-      "win_rate": 0.494,
-      "pick_rate": 0.059,
-      "avg_kda": 2.03,
-      "games": 166,
-      "champion": "Cassiopeia"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 78,
-      "win_rate": 0.494,
-      "pick_rate": 0.056,
-      "avg_kda": 2.54,
-      "games": 158,
-      "champion": "Ryze"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 76,
-      "win_rate": 0.494,
-      "pick_rate": 0.055,
-      "avg_kda": 2.18,
-      "games": 154,
-      "champion": "Qiyana"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 93,
-      "win_rate": 0.487,
-      "pick_rate": 0.068,
-      "avg_kda": 2.26,
-      "games": 191,
-      "champion": "Sylas"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 34,
-      "win_rate": 0.486,
-      "pick_rate": 0.025,
-      "avg_kda": 1.64,
-      "games": 70,
-      "champion": "Diana"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.483,
-      "pick_rate": 0.01,
-      "avg_kda": 2.85,
-      "games": 29,
-      "champion": "Quinn"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 50,
-      "win_rate": 0.481,
       "pick_rate": 0.037,
-      "avg_kda": 2.55,
-      "games": 104,
-      "champion": "Anivia"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 151,
-      "win_rate": 0.476,
-      "pick_rate": 0.113,
-      "avg_kda": 2.68,
-      "games": 317,
-      "champion": "Ahri"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 19,
-      "win_rate": 0.475,
-      "pick_rate": 0.014,
-      "avg_kda": 2.41,
-      "games": 40,
-      "champion": "Naafiri"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 47,
-      "win_rate": 0.475,
-      "pick_rate": 0.035,
-      "avg_kda": 2.4,
-      "games": 99,
-      "champion": "Annie"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 47,
-      "win_rate": 0.475,
-      "pick_rate": 0.035,
-      "avg_kda": 1.99,
-      "games": 99,
-      "champion": "Vladimir"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.469,
-      "pick_rate": 0.023,
-      "avg_kda": 1.34,
-      "games": 64,
-      "champion": "Irelia"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 60,
-      "win_rate": 0.469,
-      "pick_rate": 0.046,
-      "avg_kda": 3.04,
-      "games": 128,
+      "avg_kda": 2.86,
+      "games": 113,
       "champion": "Leblanc"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 62,
-      "win_rate": 0.459,
-      "pick_rate": 0.048,
-      "avg_kda": 2.53,
-      "games": 135,
-      "champion": "Aurora"
+      "wins": 22,
+      "win_rate": 0.5,
+      "pick_rate": 0.014,
+      "avg_kda": 2.2,
+      "games": 44,
+      "champion": "Naafiri"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.457,
-      "pick_rate": 0.012,
-      "avg_kda": 2.27,
-      "games": 35,
-      "champion": "Sion"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 28,
-      "win_rate": 0.452,
-      "pick_rate": 0.022,
-      "avg_kda": 2.25,
-      "games": 62,
-      "champion": "Vex"
+      "wins": 54,
+      "win_rate": 0.5,
+      "pick_rate": 0.035,
+      "avg_kda": 2.57,
+      "games": 108,
+      "champion": "Zoe"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 8,
-      "win_rate": 0.444,
-      "pick_rate": 0.006,
-      "avg_kda": 3.48,
-      "games": 18,
-      "champion": "Zilean"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 35,
-      "win_rate": 0.443,
-      "pick_rate": 0.028,
-      "avg_kda": 2.42,
-      "games": 79,
-      "champion": "Xerath"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 15,
-      "win_rate": 0.441,
-      "pick_rate": 0.012,
-      "avg_kda": 1.58,
-      "games": 34,
-      "champion": "Azir"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 26,
-      "win_rate": 0.441,
-      "pick_rate": 0.021,
-      "avg_kda": 1.75,
-      "games": 59,
-      "champion": "Malzahar"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 51,
-      "win_rate": 0.436,
-      "pick_rate": 0.042,
-      "avg_kda": 2.3,
-      "games": 117,
-      "champion": "Akshan"
+      "win_rate": 0.5,
+      "pick_rate": 0.005,
+      "avg_kda": 2.2,
+      "games": 16,
+      "champion": "Ziggs"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 10,
-      "win_rate": 0.435,
-      "pick_rate": 0.008,
-      "avg_kda": 2.09,
-      "games": 23,
-      "champion": "Viego"
+      "win_rate": 0.5,
+      "pick_rate": 0.006,
+      "avg_kda": 2.74,
+      "games": 20,
+      "champion": "Singed"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.5,
+      "pick_rate": 0.004,
+      "avg_kda": 2.34,
+      "games": 12,
+      "champion": "Quinn"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 98,
+      "win_rate": 0.497,
+      "pick_rate": 0.064,
+      "avg_kda": 2.36,
+      "games": 197,
+      "champion": "Zed"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 94,
+      "win_rate": 0.495,
+      "pick_rate": 0.061,
+      "avg_kda": 2.51,
+      "games": 190,
+      "champion": "Katarina"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.493,
+      "pick_rate": 0.047,
+      "avg_kda": 1.77,
+      "games": 144,
+      "champion": "Yasuo"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 71,
+      "win_rate": 0.49,
+      "pick_rate": 0.047,
+      "avg_kda": 2.23,
+      "games": 145,
+      "champion": "Qiyana"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 20,
+      "win_rate": 0.488,
+      "pick_rate": 0.013,
+      "avg_kda": 2.53,
+      "games": 41,
+      "champion": "Velkoz"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 98,
+      "win_rate": 0.48,
+      "pick_rate": 0.066,
+      "avg_kda": 2.36,
+      "games": 204,
+      "champion": "Cassiopeia"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 49,
+      "win_rate": 0.48,
+      "pick_rate": 0.033,
+      "avg_kda": 2.16,
+      "games": 102,
+      "champion": "Kassadin"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 12,
-      "win_rate": 0.429,
-      "pick_rate": 0.01,
-      "avg_kda": 2.28,
-      "games": 28,
-      "champion": "Pantheon"
+      "win_rate": 0.48,
+      "pick_rate": 0.008,
+      "avg_kda": 2.24,
+      "games": 25,
+      "champion": "Kayle"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.424,
-      "pick_rate": 0.012,
-      "avg_kda": 1.99,
-      "games": 33,
-      "champion": "Tristana"
+      "wins": 24,
+      "win_rate": 0.48,
+      "pick_rate": 0.016,
+      "avg_kda": 2.58,
+      "games": 50,
+      "champion": "Lux"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 11,
+      "win_rate": 0.478,
+      "pick_rate": 0.007,
+      "avg_kda": 1.78,
+      "games": 23,
+      "champion": "Gwen"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 22,
+      "win_rate": 0.478,
+      "pick_rate": 0.015,
+      "avg_kda": 2.19,
+      "games": 46,
+      "champion": "Azir"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 52,
+      "win_rate": 0.477,
+      "pick_rate": 0.035,
+      "avg_kda": 2.19,
+      "games": 109,
+      "champion": "Riven"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 8,
-      "win_rate": 0.421,
-      "pick_rate": 0.007,
-      "avg_kda": 1.45,
-      "games": 19,
-      "champion": "Ambessa"
+      "win_rate": 0.471,
+      "pick_rate": 0.005,
+      "avg_kda": 2.44,
+      "games": 17,
+      "champion": "Malphite"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 95,
+      "win_rate": 0.466,
+      "pick_rate": 0.066,
+      "avg_kda": 2.34,
+      "games": 204,
+      "champion": "Syndra"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 47,
+      "win_rate": 0.465,
+      "pick_rate": 0.033,
+      "avg_kda": 2.35,
+      "games": 101,
+      "champion": "Akshan"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.464,
+      "pick_rate": 0.027,
+      "avg_kda": 2.13,
+      "games": 84,
+      "champion": "Lissandra"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.462,
+      "pick_rate": 0.004,
+      "avg_kda": 1.9,
+      "games": 13,
+      "champion": "Corki"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 39,
+      "win_rate": 0.453,
+      "pick_rate": 0.028,
+      "avg_kda": 1.85,
+      "games": 86,
+      "champion": "Diana"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 43,
+      "win_rate": 0.443,
+      "pick_rate": 0.031,
+      "avg_kda": 2.58,
+      "games": 97,
+      "champion": "Hwei"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.438,
+      "pick_rate": 0.005,
+      "avg_kda": 2.62,
+      "games": 16,
+      "champion": "Gangplank"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 37,
+      "win_rate": 0.435,
+      "pick_rate": 0.027,
+      "avg_kda": 2.67,
+      "games": 85,
+      "champion": "Xerath"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 24,
+      "win_rate": 0.429,
+      "pick_rate": 0.018,
+      "avg_kda": 2.31,
+      "games": 56,
+      "champion": "Sion"
     },
     {
       "team_position": "MIDDLE",
@@ -2120,121 +2170,181 @@
       "wins": 5,
       "win_rate": 0.417,
       "pick_rate": 0.004,
-      "avg_kda": 2.29,
+      "avg_kda": 2.08,
       "games": 12,
-      "champion": "Camille"
+      "champion": "Nasus"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 6,
+      "wins": 73,
+      "win_rate": 0.415,
+      "pick_rate": 0.057,
+      "avg_kda": 2.16,
+      "games": 176,
+      "champion": "Ryze"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 63,
+      "win_rate": 0.409,
+      "pick_rate": 0.05,
+      "avg_kda": 1.61,
+      "games": 154,
+      "champion": "Yone"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 4,
       "win_rate": 0.4,
-      "pick_rate": 0.005,
-      "avg_kda": 1.63,
-      "games": 15,
-      "champion": "Corki"
+      "pick_rate": 0.003,
+      "avg_kda": 2.67,
+      "games": 10,
+      "champion": "Renekton"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.4,
-      "pick_rate": 0.014,
-      "avg_kda": 2.19,
-      "games": 40,
-      "champion": "Veigar"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 8,
-      "win_rate": 0.381,
-      "pick_rate": 0.007,
-      "avg_kda": 1.69,
-      "games": 21,
-      "champion": "Gragas"
+      "wins": 9,
+      "win_rate": 0.375,
+      "pick_rate": 0.008,
+      "avg_kda": 1.89,
+      "games": 24,
+      "champion": "Tristana"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 6,
       "win_rate": 0.375,
-      "pick_rate": 0.006,
-      "avg_kda": 1.56,
-      "games": 16,
-      "champion": "Gwen"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.37,
-      "pick_rate": 0.01,
-      "avg_kda": 2.5,
-      "games": 27,
-      "champion": "Nunu"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 3,
-      "win_rate": 0.3,
-      "pick_rate": 0.004,
-      "avg_kda": 1.76,
-      "games": 10,
-      "champion": "Jax"
-    },
-    {
-      "team_position": "MIDDLE",
-      "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.286,
       "pick_rate": 0.005,
-      "avg_kda": 1.97,
-      "games": 14,
-      "champion": "Neeko"
+      "avg_kda": 2.16,
+      "games": 16,
+      "champion": "Garen"
     },
     {
       "team_position": "MIDDLE",
       "patch": "16.11",
       "wins": 16,
-      "win_rate": 0.286,
-      "pick_rate": 0.02,
-      "avg_kda": 2.1,
-      "games": 56,
-      "champion": "Mel"
+      "win_rate": 0.356,
+      "pick_rate": 0.015,
+      "avg_kda": 2.48,
+      "games": 45,
+      "champion": "AurelionSol"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.35,
+      "pick_rate": 0.006,
+      "avg_kda": 2.18,
+      "games": 20,
+      "champion": "Rumble"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 4,
+      "win_rate": 0.333,
+      "pick_rate": 0.004,
+      "avg_kda": 1.33,
+      "games": 12,
+      "champion": "Heimerdinger"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.333,
+      "pick_rate": 0.007,
+      "avg_kda": 1.6,
+      "games": 21,
+      "champion": "Viego"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 15,
+      "win_rate": 0.326,
+      "pick_rate": 0.015,
+      "avg_kda": 2.02,
+      "games": 46,
+      "champion": "Veigar"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.312,
+      "pick_rate": 0.005,
+      "avg_kda": 1.66,
+      "games": 16,
+      "champion": "Smolder"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 4,
+      "win_rate": 0.308,
+      "pick_rate": 0.004,
+      "avg_kda": 1.7,
+      "games": 13,
+      "champion": "KogMaw"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 3,
+      "win_rate": 0.273,
+      "pick_rate": 0.004,
+      "avg_kda": 1.87,
+      "games": 11,
+      "champion": "Varus"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 3,
+      "win_rate": 0.25,
+      "pick_rate": 0.004,
+      "avg_kda": 1.97,
+      "games": 12,
+      "champion": "Camille"
+    },
+    {
+      "team_position": "MIDDLE",
+      "patch": "16.11",
+      "wins": 4,
+      "win_rate": 0.2,
+      "pick_rate": 0.006,
+      "avg_kda": 2.09,
+      "games": 20,
+      "champion": "Nunu"
     }
   ],
   "BOTTOM": [
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.696,
-      "pick_rate": 0.008,
-      "avg_kda": 2.9,
-      "games": 23,
-      "champion": "Zyra"
+      "wins": 7,
+      "win_rate": 0.7,
+      "pick_rate": 0.003,
+      "avg_kda": 3.31,
+      "games": 10,
+      "champion": "Rumble"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 36,
-      "win_rate": 0.655,
-      "pick_rate": 0.02,
-      "avg_kda": 3.23,
-      "games": 55,
-      "champion": "Ziggs"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.643,
-      "pick_rate": 0.005,
-      "avg_kda": 3.52,
-      "games": 14,
-      "champion": "Akshan"
+      "wins": 13,
+      "win_rate": 0.65,
+      "pick_rate": 0.006,
+      "avg_kda": 2.58,
+      "games": 20,
+      "champion": "TahmKench"
     },
     {
       "team_position": "BOTTOM",
@@ -2242,479 +2352,479 @@
       "wins": 7,
       "win_rate": 0.636,
       "pick_rate": 0.004,
-      "avg_kda": 2.34,
+      "avg_kda": 2.09,
       "games": 11,
-      "champion": "Riven"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.627,
-      "pick_rate": 0.018,
-      "avg_kda": 2.93,
-      "games": 51,
-      "champion": "Hwei"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 35,
-      "win_rate": 0.625,
-      "pick_rate": 0.02,
-      "avg_kda": 2.46,
-      "games": 56,
-      "champion": "Yasuo"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.6,
-      "pick_rate": 0.005,
-      "avg_kda": 3.48,
-      "games": 15,
-      "champion": "Xerath"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.593,
-      "pick_rate": 0.01,
-      "avg_kda": 1.95,
-      "games": 27,
-      "champion": "Fiora"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 40,
-      "win_rate": 0.588,
-      "pick_rate": 0.024,
-      "avg_kda": 2.25,
-      "games": 68,
-      "champion": "KogMaw"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.56,
-      "pick_rate": 0.009,
-      "avg_kda": 1.87,
-      "games": 25,
-      "champion": "Nilah"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.552,
-      "pick_rate": 0.01,
-      "avg_kda": 2.51,
-      "games": 29,
-      "champion": "Syndra"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 45,
-      "win_rate": 0.549,
-      "pick_rate": 0.029,
-      "avg_kda": 3.48,
-      "games": 82,
-      "champion": "AurelionSol"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 47,
-      "win_rate": 0.547,
-      "pick_rate": 0.031,
-      "avg_kda": 2.03,
-      "games": 86,
-      "champion": "Brand"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.545,
-      "pick_rate": 0.004,
-      "avg_kda": 2.53,
-      "games": 11,
-      "champion": "Annie"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 153,
-      "win_rate": 0.544,
-      "pick_rate": 0.1,
-      "avg_kda": 2.4,
-      "games": 281,
-      "champion": "Zeri"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 37,
-      "win_rate": 0.544,
-      "pick_rate": 0.024,
-      "avg_kda": 2.71,
-      "games": 68,
-      "champion": "Vladimir"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 64,
-      "win_rate": 0.542,
-      "pick_rate": 0.042,
-      "avg_kda": 2.12,
-      "games": 118,
-      "champion": "Tristana"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 152,
-      "win_rate": 0.531,
-      "pick_rate": 0.102,
-      "avg_kda": 3.14,
-      "games": 286,
-      "champion": "Senna"
+      "champion": "Olaf"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
       "wins": 12,
-      "win_rate": 0.522,
-      "pick_rate": 0.008,
-      "avg_kda": 2.35,
-      "games": 23,
-      "champion": "Viktor"
+      "win_rate": 0.6,
+      "pick_rate": 0.006,
+      "avg_kda": 2.28,
+      "games": 20,
+      "champion": "Veigar"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.519,
-      "pick_rate": 0.01,
-      "avg_kda": 2.0,
-      "games": 27,
-      "champion": "Katarina"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 90,
-      "win_rate": 0.517,
-      "pick_rate": 0.062,
-      "avg_kda": 2.22,
-      "games": 174,
-      "champion": "Kalista"
+      "wins": 117,
+      "win_rate": 0.591,
+      "pick_rate": 0.064,
+      "avg_kda": 2.41,
+      "games": 198,
+      "champion": "Varus"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
       "wins": 93,
-      "win_rate": 0.517,
-      "pick_rate": 0.064,
-      "avg_kda": 2.1,
-      "games": 180,
-      "champion": "Yunara"
+      "win_rate": 0.585,
+      "pick_rate": 0.051,
+      "avg_kda": 2.33,
+      "games": 159,
+      "champion": "Tristana"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 16,
-      "win_rate": 0.516,
-      "pick_rate": 0.011,
+      "wins": 112,
+      "win_rate": 0.574,
+      "pick_rate": 0.063,
+      "avg_kda": 2.51,
+      "games": 195,
+      "champion": "Jinx"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 8,
+      "win_rate": 0.571,
+      "pick_rate": 0.005,
+      "avg_kda": 2.67,
+      "games": 14,
+      "champion": "Riven"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 38,
+      "win_rate": 0.559,
+      "pick_rate": 0.022,
+      "avg_kda": 2.35,
+      "games": 68,
+      "champion": "Xayah"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 161,
+      "win_rate": 0.555,
+      "pick_rate": 0.094,
+      "avg_kda": 2.44,
+      "games": 290,
+      "champion": "Zeri"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.538,
+      "pick_rate": 0.004,
+      "avg_kda": 2.72,
+      "games": 13,
+      "champion": "Xerath"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 59,
+      "win_rate": 0.536,
+      "pick_rate": 0.036,
+      "avg_kda": 2.48,
+      "games": 110,
+      "champion": "MissFortune"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 73,
+      "win_rate": 0.533,
+      "pick_rate": 0.044,
+      "avg_kda": 2.2,
+      "games": 137,
+      "champion": "Lucian"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 282,
+      "win_rate": 0.531,
+      "pick_rate": 0.172,
+      "avg_kda": 3.28,
+      "games": 531,
+      "champion": "Senna"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.526,
+      "pick_rate": 0.006,
+      "avg_kda": 4.4,
+      "games": 19,
+      "champion": "Zilean"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 33,
+      "win_rate": 0.524,
+      "pick_rate": 0.02,
+      "avg_kda": 3.51,
+      "games": 63,
+      "champion": "Lux"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 116,
+      "win_rate": 0.523,
+      "pick_rate": 0.072,
+      "avg_kda": 1.96,
+      "games": 222,
+      "champion": "Draven"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 24,
+      "win_rate": 0.522,
+      "pick_rate": 0.015,
+      "avg_kda": 2.05,
+      "games": 46,
+      "champion": "Nilah"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 153,
+      "win_rate": 0.513,
+      "pick_rate": 0.096,
+      "avg_kda": 2.42,
+      "games": 298,
+      "champion": "Ashe"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 20,
+      "win_rate": 0.513,
+      "pick_rate": 0.013,
       "avg_kda": 2.34,
-      "games": 31,
-      "champion": "Velkoz"
+      "games": 39,
+      "champion": "Cassiopeia"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 70,
-      "win_rate": 0.515,
-      "pick_rate": 0.049,
-      "avg_kda": 2.1,
-      "games": 136,
+      "wins": 50,
+      "win_rate": 0.505,
+      "pick_rate": 0.032,
+      "avg_kda": 1.91,
+      "games": 99,
       "champion": "Karthus"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 241,
-      "win_rate": 0.513,
-      "pick_rate": 0.168,
-      "avg_kda": 2.42,
-      "games": 470,
-      "champion": "Ezreal"
+      "wins": 173,
+      "win_rate": 0.504,
+      "pick_rate": 0.111,
+      "avg_kda": 2.15,
+      "games": 343,
+      "champion": "Caitlyn"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.508,
-      "pick_rate": 0.021,
-      "avg_kda": 2.71,
-      "games": 59,
-      "champion": "Swain"
+      "wins": 50,
+      "win_rate": 0.495,
+      "pick_rate": 0.033,
+      "avg_kda": 2.13,
+      "games": 101,
+      "champion": "KogMaw"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
       "wins": 37,
-      "win_rate": 0.507,
-      "pick_rate": 0.026,
-      "avg_kda": 2.48,
+      "win_rate": 0.493,
+      "pick_rate": 0.024,
+      "avg_kda": 2.82,
+      "games": 75,
+      "champion": "Swain"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 41,
+      "win_rate": 0.488,
+      "pick_rate": 0.027,
+      "avg_kda": 2.04,
+      "games": 84,
+      "champion": "Aphelios"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 262,
+      "win_rate": 0.487,
+      "pick_rate": 0.174,
+      "avg_kda": 2.35,
+      "games": 538,
+      "champion": "Ezreal"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 197,
+      "win_rate": 0.483,
+      "pick_rate": 0.132,
+      "avg_kda": 2.98,
+      "games": 408,
+      "champion": "Jhin"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 28,
+      "win_rate": 0.483,
+      "pick_rate": 0.019,
+      "avg_kda": 1.98,
+      "games": 58,
+      "champion": "Smolder"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 48,
+      "win_rate": 0.475,
+      "pick_rate": 0.033,
+      "avg_kda": 1.97,
+      "games": 101,
+      "champion": "Brand"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 74,
+      "win_rate": 0.474,
+      "pick_rate": 0.05,
+      "avg_kda": 2.16,
+      "games": 156,
+      "champion": "Kalista"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.473,
+      "pick_rate": 0.018,
+      "avg_kda": 2.58,
+      "games": 55,
+      "champion": "Vladimir"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 41,
+      "win_rate": 0.471,
+      "pick_rate": 0.028,
+      "avg_kda": 2.7,
+      "games": 87,
+      "champion": "Ziggs"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 97,
+      "win_rate": 0.469,
+      "pick_rate": 0.067,
+      "avg_kda": 1.94,
+      "games": 207,
+      "champion": "Yunara"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 49,
+      "win_rate": 0.467,
+      "pick_rate": 0.034,
+      "avg_kda": 2.39,
+      "games": 105,
+      "champion": "Sivir"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 34,
+      "win_rate": 0.466,
+      "pick_rate": 0.024,
+      "avg_kda": 2.32,
       "games": 73,
       "champion": "Mel"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 75,
-      "win_rate": 0.507,
-      "pick_rate": 0.053,
-      "avg_kda": 2.28,
-      "games": 148,
-      "champion": "Lucian"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 44,
-      "win_rate": 0.5,
-      "pick_rate": 0.031,
-      "avg_kda": 2.9,
-      "games": 88,
-      "champion": "Seraphine"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.5,
-      "pick_rate": 0.006,
-      "avg_kda": 2.04,
-      "games": 18,
-      "champion": "Veigar"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 18,
-      "win_rate": 0.5,
-      "pick_rate": 0.013,
-      "avg_kda": 2.15,
-      "games": 36,
-      "champion": "Cassiopeia"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 128,
-      "win_rate": 0.496,
-      "pick_rate": 0.092,
-      "avg_kda": 2.08,
-      "games": 258,
-      "champion": "Ashe"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 48,
-      "win_rate": 0.495,
-      "pick_rate": 0.035,
-      "avg_kda": 2.2,
-      "games": 97,
-      "champion": "Sivir"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 42,
-      "win_rate": 0.494,
-      "pick_rate": 0.03,
-      "avg_kda": 2.24,
-      "games": 85,
-      "champion": "Corki"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 138,
-      "win_rate": 0.493,
-      "pick_rate": 0.1,
-      "avg_kda": 2.45,
-      "games": 280,
-      "champion": "Kaisa"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 176,
-      "win_rate": 0.486,
-      "pick_rate": 0.129,
-      "avg_kda": 3.03,
-      "games": 362,
-      "champion": "Jhin"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 53,
-      "win_rate": 0.482,
-      "pick_rate": 0.039,
-      "avg_kda": 1.99,
-      "games": 110,
-      "champion": "Smolder"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 152,
-      "win_rate": 0.481,
-      "pick_rate": 0.113,
-      "avg_kda": 2.11,
-      "games": 316,
-      "champion": "Caitlyn"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 9,
-      "win_rate": 0.474,
-      "pick_rate": 0.007,
-      "avg_kda": 2.74,
-      "games": 19,
-      "champion": "Heimerdinger"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 31,
-      "win_rate": 0.463,
-      "pick_rate": 0.024,
-      "avg_kda": 1.92,
-      "games": 67,
+      "wins": 40,
+      "win_rate": 0.465,
+      "pick_rate": 0.028,
+      "avg_kda": 2.22,
+      "games": 86,
       "champion": "Twitch"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 11,
-      "win_rate": 0.458,
-      "pick_rate": 0.009,
-      "avg_kda": 2.5,
-      "games": 24,
-      "champion": "TahmKench"
+      "wins": 20,
+      "win_rate": 0.465,
+      "pick_rate": 0.014,
+      "avg_kda": 2.8,
+      "games": 43,
+      "champion": "Velkoz"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 72,
-      "win_rate": 0.453,
-      "pick_rate": 0.057,
-      "avg_kda": 1.99,
-      "games": 159,
-      "champion": "Varus"
+      "wins": 51,
+      "win_rate": 0.464,
+      "pick_rate": 0.036,
+      "avg_kda": 2.82,
+      "games": 110,
+      "champion": "Seraphine"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 26,
-      "win_rate": 0.448,
-      "pick_rate": 0.021,
-      "avg_kda": 2.94,
-      "games": 58,
-      "champion": "Lux"
+      "wins": 20,
+      "win_rate": 0.444,
+      "pick_rate": 0.015,
+      "avg_kda": 2.04,
+      "games": 45,
+      "champion": "Zyra"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 86,
-      "win_rate": 0.446,
-      "pick_rate": 0.069,
-      "avg_kda": 2.28,
-      "games": 193,
-      "champion": "Jinx"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 34,
-      "win_rate": 0.442,
-      "pick_rate": 0.027,
-      "avg_kda": 2.29,
-      "games": 77,
-      "champion": "Xayah"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 61,
+      "wins": 29,
       "win_rate": 0.439,
-      "pick_rate": 0.05,
-      "avg_kda": 2.12,
-      "games": 139,
-      "champion": "Samira"
-    },
-    {
-      "team_position": "BOTTOM",
-      "patch": "16.11",
-      "wins": 24,
-      "win_rate": 0.436,
-      "pick_rate": 0.02,
-      "avg_kda": 2.01,
-      "games": 55,
+      "pick_rate": 0.021,
+      "avg_kda": 1.93,
+      "games": 66,
       "champion": "Vayne"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 98,
+      "wins": 7,
+      "win_rate": 0.438,
+      "pick_rate": 0.005,
+      "avg_kda": 2.79,
+      "games": 16,
+      "champion": "Viktor"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.438,
+      "pick_rate": 0.005,
+      "avg_kda": 2.12,
+      "games": 16,
+      "champion": "Heimerdinger"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 34,
+      "win_rate": 0.436,
+      "pick_rate": 0.025,
+      "avg_kda": 2.71,
+      "games": 78,
+      "champion": "AurelionSol"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 27,
+      "win_rate": 0.435,
+      "pick_rate": 0.02,
+      "avg_kda": 1.69,
+      "games": 62,
+      "champion": "Yasuo"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 117,
       "win_rate": 0.432,
-      "pick_rate": 0.081,
-      "avg_kda": 1.94,
-      "games": 227,
-      "champion": "Draven"
+      "pick_rate": 0.088,
+      "avg_kda": 2.22,
+      "games": 271,
+      "champion": "Kaisa"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 39,
-      "win_rate": 0.419,
-      "pick_rate": 0.033,
+      "wins": 41,
+      "win_rate": 0.427,
+      "pick_rate": 0.031,
+      "avg_kda": 2.07,
+      "games": 96,
+      "champion": "Samira"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 21,
+      "win_rate": 0.412,
+      "pick_rate": 0.016,
+      "avg_kda": 2.51,
+      "games": 51,
+      "champion": "Hwei"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 16,
+      "win_rate": 0.41,
+      "pick_rate": 0.013,
       "avg_kda": 2.13,
-      "games": 93,
-      "champion": "MissFortune"
+      "games": 39,
+      "champion": "Katarina"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 31,
-      "win_rate": 0.378,
-      "pick_rate": 0.029,
-      "avg_kda": 1.68,
-      "games": 82,
-      "champion": "Aphelios"
+      "wins": 11,
+      "win_rate": 0.407,
+      "pick_rate": 0.009,
+      "avg_kda": 2.32,
+      "games": 27,
+      "champion": "Syndra"
     },
     {
       "team_position": "BOTTOM",
       "patch": "16.11",
-      "wins": 4,
-      "win_rate": 0.364,
-      "pick_rate": 0.004,
-      "avg_kda": 2.39,
-      "games": 11,
-      "champion": "Ekko"
+      "wins": 24,
+      "win_rate": 0.387,
+      "pick_rate": 0.02,
+      "avg_kda": 2.01,
+      "games": 62,
+      "champion": "Corki"
     },
     {
       "team_position": "BOTTOM",
@@ -2722,531 +2832,541 @@
       "wins": 5,
       "win_rate": 0.357,
       "pick_rate": 0.005,
-      "avg_kda": 1.54,
+      "avg_kda": 2.47,
       "games": 14,
-      "champion": "MasterYi"
+      "champion": "Ekko"
+    },
+    {
+      "team_position": "BOTTOM",
+      "patch": "16.11",
+      "wins": 8,
+      "win_rate": 0.308,
+      "pick_rate": 0.008,
+      "avg_kda": 1.84,
+      "games": 26,
+      "champion": "Fiora"
     }
   ],
   "UTILITY": [
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.619,
-      "pick_rate": 0.007,
-      "avg_kda": 2.09,
-      "games": 21,
-      "champion": "Sion"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.6,
-      "pick_rate": 0.004,
-      "avg_kda": 3.06,
-      "games": 10,
-      "champion": "Gragas"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 30,
-      "win_rate": 0.588,
-      "pick_rate": 0.018,
-      "avg_kda": 4.08,
-      "games": 51,
-      "champion": "Taric"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.583,
-      "pick_rate": 0.004,
-      "avg_kda": 3.36,
-      "games": 12,
-      "champion": "FiddleSticks"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 55,
-      "win_rate": 0.579,
-      "pick_rate": 0.034,
-      "avg_kda": 3.19,
-      "games": 95,
-      "champion": "Sona"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 48,
-      "win_rate": 0.565,
-      "pick_rate": 0.03,
-      "avg_kda": 2.19,
-      "games": 85,
-      "champion": "Velkoz"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 159,
-      "win_rate": 0.56,
-      "pick_rate": 0.101,
-      "avg_kda": 3.29,
-      "games": 284,
-      "champion": "Rell"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 61,
-      "win_rate": 0.56,
-      "pick_rate": 0.039,
-      "avg_kda": 2.7,
-      "games": 109,
-      "champion": "Blitzcrank"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 221,
-      "win_rate": 0.551,
-      "pick_rate": 0.143,
-      "avg_kda": 3.49,
-      "games": 401,
-      "champion": "Bard"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 18,
-      "win_rate": 0.545,
-      "pick_rate": 0.012,
-      "avg_kda": 2.33,
-      "games": 33,
-      "champion": "TahmKench"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 147,
-      "win_rate": 0.538,
-      "pick_rate": 0.097,
-      "avg_kda": 2.94,
-      "games": 273,
-      "champion": "Karma"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 100,
-      "win_rate": 0.538,
-      "pick_rate": 0.066,
-      "avg_kda": 2.72,
-      "games": 186,
-      "champion": "Alistar"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 113,
-      "win_rate": 0.523,
-      "pick_rate": 0.077,
-      "avg_kda": 3.42,
-      "games": 216,
-      "champion": "Janna"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 121,
-      "win_rate": 0.522,
-      "pick_rate": 0.083,
-      "avg_kda": 2.51,
-      "games": 232,
-      "champion": "Leona"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 13,
-      "win_rate": 0.52,
-      "pick_rate": 0.009,
-      "avg_kda": 1.82,
-      "games": 25,
-      "champion": "Brand"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 104,
-      "win_rate": 0.517,
-      "pick_rate": 0.072,
-      "avg_kda": 3.17,
-      "games": 201,
-      "champion": "Nami"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 110,
-      "win_rate": 0.516,
-      "pick_rate": 0.076,
-      "avg_kda": 2.91,
-      "games": 213,
-      "champion": "Thresh"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 28,
-      "win_rate": 0.509,
-      "pick_rate": 0.02,
-      "avg_kda": 2.36,
-      "games": 55,
-      "champion": "Zoe"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 32,
-      "win_rate": 0.508,
-      "pick_rate": 0.022,
-      "avg_kda": 3.51,
-      "games": 63,
-      "champion": "Renata"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 14,
-      "win_rate": 0.5,
-      "pick_rate": 0.01,
-      "avg_kda": 2.58,
-      "games": 28,
-      "champion": "Galio"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.5,
+      "wins": 12,
+      "win_rate": 0.706,
       "pick_rate": 0.005,
-      "avg_kda": 1.92,
-      "games": 14,
-      "champion": "Anivia"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 29,
-      "win_rate": 0.5,
-      "pick_rate": 0.021,
-      "avg_kda": 2.13,
-      "games": 58,
-      "champion": "Elise"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 2.04,
-      "games": 12,
+      "avg_kda": 2.43,
+      "games": 17,
       "champion": "Amumu"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 2.0,
-      "games": 10,
-      "champion": "Skarner"
+      "wins": 15,
+      "win_rate": 0.682,
+      "pick_rate": 0.007,
+      "avg_kda": 3.17,
+      "games": 22,
+      "champion": "Gragas"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 2.27,
-      "games": 10,
-      "champion": "Taliyah"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 6,
-      "win_rate": 0.5,
-      "pick_rate": 0.004,
-      "avg_kda": 2.2,
-      "games": 12,
-      "champion": "Mel"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 84,
-      "win_rate": 0.497,
-      "pick_rate": 0.06,
-      "avg_kda": 3.08,
-      "games": 169,
-      "champion": "Soraka"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 57,
-      "win_rate": 0.496,
-      "pick_rate": 0.041,
-      "avg_kda": 2.12,
-      "games": 115,
-      "champion": "Pantheon"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 248,
-      "win_rate": 0.495,
-      "pick_rate": 0.179,
-      "avg_kda": 2.48,
-      "games": 501,
-      "champion": "Nautilus"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 101,
-      "win_rate": 0.493,
-      "pick_rate": 0.073,
-      "avg_kda": 2.14,
-      "games": 205,
-      "champion": "Pyke"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 130,
-      "win_rate": 0.492,
-      "pick_rate": 0.094,
-      "avg_kda": 2.61,
-      "games": 264,
-      "champion": "Senna"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 42,
-      "win_rate": 0.488,
-      "pick_rate": 0.031,
-      "avg_kda": 3.07,
-      "games": 86,
-      "champion": "Zilean"
+      "wins": 20,
+      "win_rate": 0.625,
+      "pick_rate": 0.01,
+      "avg_kda": 2.93,
+      "games": 32,
+      "champion": "Anivia"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
       "wins": 15,
-      "win_rate": 0.484,
-      "pick_rate": 0.011,
-      "avg_kda": 2.27,
-      "games": 31,
-      "champion": "Shaco"
+      "win_rate": 0.625,
+      "pick_rate": 0.008,
+      "avg_kda": 2.12,
+      "games": 24,
+      "champion": "Brand"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 43,
-      "win_rate": 0.478,
-      "pick_rate": 0.032,
-      "avg_kda": 2.5,
+      "wins": 55,
+      "win_rate": 0.611,
+      "pick_rate": 0.029,
+      "avg_kda": 3.62,
       "games": 90,
-      "champion": "Neeko"
+      "champion": "Zilean"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 86,
-      "win_rate": 0.467,
-      "pick_rate": 0.066,
-      "avg_kda": 3.35,
-      "games": 184,
-      "champion": "Rakan"
+      "wins": 26,
+      "win_rate": 0.605,
+      "pick_rate": 0.014,
+      "avg_kda": 2.27,
+      "games": 43,
+      "champion": "Sylas"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.455,
+      "wins": 34,
+      "win_rate": 0.576,
+      "pick_rate": 0.019,
+      "avg_kda": 3.56,
+      "games": 59,
+      "champion": "Taric"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 212,
+      "win_rate": 0.573,
+      "pick_rate": 0.12,
+      "avg_kda": 3.36,
+      "games": 370,
+      "champion": "Rell"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 9,
+      "win_rate": 0.562,
+      "pick_rate": 0.005,
+      "avg_kda": 2.79,
+      "games": 16,
+      "champion": "Xerath"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.56,
+      "pick_rate": 0.008,
+      "avg_kda": 2.54,
+      "games": 25,
+      "champion": "Zyra"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.56,
+      "pick_rate": 0.008,
+      "avg_kda": 2.65,
+      "games": 25,
+      "champion": "TahmKench"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 53,
+      "win_rate": 0.546,
+      "pick_rate": 0.031,
+      "avg_kda": 3.76,
+      "games": 97,
+      "champion": "Milio"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 6,
+      "win_rate": 0.545,
       "pick_rate": 0.004,
-      "avg_kda": 2.24,
+      "avg_kda": 2.23,
       "games": 11,
       "champion": "Annie"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.455,
-      "pick_rate": 0.004,
-      "avg_kda": 1.65,
-      "games": 11,
-      "champion": "Quinn"
+      "wins": 15,
+      "win_rate": 0.536,
+      "pick_rate": 0.009,
+      "avg_kda": 2.32,
+      "games": 28,
+      "champion": "Maokai"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 117,
-      "win_rate": 0.453,
-      "pick_rate": 0.092,
-      "avg_kda": 3.12,
-      "games": 258,
-      "champion": "Lulu"
+      "wins": 147,
+      "win_rate": 0.533,
+      "pick_rate": 0.089,
+      "avg_kda": 2.94,
+      "games": 276,
+      "champion": "Thresh"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 91,
-      "win_rate": 0.453,
-      "pick_rate": 0.072,
-      "avg_kda": 2.65,
-      "games": 201,
-      "champion": "Seraphine"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 28,
-      "win_rate": 0.444,
-      "pick_rate": 0.022,
-      "avg_kda": 2.89,
-      "games": 63,
+      "wins": 46,
+      "win_rate": 0.529,
+      "pick_rate": 0.028,
+      "avg_kda": 2.73,
+      "games": 87,
       "champion": "Lux"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 27,
-      "win_rate": 0.443,
-      "pick_rate": 0.022,
-      "avg_kda": 2.16,
-      "games": 61,
-      "champion": "Poppy"
+      "wins": 114,
+      "win_rate": 0.528,
+      "pick_rate": 0.07,
+      "avg_kda": 2.87,
+      "games": 216,
+      "champion": "Seraphine"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 61,
-      "win_rate": 0.442,
-      "pick_rate": 0.049,
-      "avg_kda": 2.67,
-      "games": 138,
+      "wins": 96,
+      "win_rate": 0.525,
+      "pick_rate": 0.059,
+      "avg_kda": 3.07,
+      "games": 183,
       "champion": "Braum"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 17,
-      "win_rate": 0.436,
-      "pick_rate": 0.014,
-      "avg_kda": 4.27,
-      "games": 39,
-      "champion": "Yuumi"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 39,
-      "win_rate": 0.433,
-      "pick_rate": 0.032,
-      "avg_kda": 3.39,
-      "games": 90,
-      "champion": "Milio"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.429,
-      "pick_rate": 0.01,
-      "avg_kda": 1.75,
-      "games": 28,
-      "champion": "Sylas"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 21,
-      "win_rate": 0.42,
-      "pick_rate": 0.018,
-      "avg_kda": 2.08,
-      "games": 50,
-      "champion": "Camille"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 10,
-      "win_rate": 0.417,
-      "pick_rate": 0.009,
-      "avg_kda": 2.41,
-      "games": 24,
+      "wins": 11,
+      "win_rate": 0.524,
+      "pick_rate": 0.007,
+      "avg_kda": 3.23,
+      "games": 21,
       "champion": "Shen"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 5,
-      "win_rate": 0.417,
-      "pick_rate": 0.004,
-      "avg_kda": 2.81,
-      "games": 12,
-      "champion": "Xerath"
+      "wins": 141,
+      "win_rate": 0.522,
+      "pick_rate": 0.087,
+      "avg_kda": 2.87,
+      "games": 270,
+      "champion": "Senna"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.412,
-      "pick_rate": 0.006,
-      "avg_kda": 1.39,
-      "games": 17,
-      "champion": "Zyra"
+      "wins": 39,
+      "win_rate": 0.52,
+      "pick_rate": 0.024,
+      "avg_kda": 4.34,
+      "games": 75,
+      "champion": "Yuumi"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.4,
-      "pick_rate": 0.011,
-      "avg_kda": 2.58,
-      "games": 30,
-      "champion": "Morgana"
-    },
-    {
-      "team_position": "UTILITY",
-      "patch": "16.11",
-      "wins": 7,
-      "win_rate": 0.35,
-      "pick_rate": 0.007,
-      "avg_kda": 1.8,
-      "games": 20,
+      "wins": 13,
+      "win_rate": 0.52,
+      "pick_rate": 0.008,
+      "avg_kda": 2.47,
+      "games": 25,
       "champion": "Swain"
     },
     {
       "team_position": "UTILITY",
       "patch": "16.11",
-      "wins": 12,
-      "win_rate": 0.3,
-      "pick_rate": 0.014,
-      "avg_kda": 2.19,
-      "games": 40,
-      "champion": "Maokai"
+      "wins": 117,
+      "win_rate": 0.518,
+      "pick_rate": 0.073,
+      "avg_kda": 2.53,
+      "games": 226,
+      "champion": "Alistar"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 137,
+      "win_rate": 0.517,
+      "pick_rate": 0.086,
+      "avg_kda": 3.24,
+      "games": 265,
+      "champion": "Lulu"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 81,
+      "win_rate": 0.516,
+      "pick_rate": 0.051,
+      "avg_kda": 2.91,
+      "games": 157,
+      "champion": "Soraka"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 133,
+      "win_rate": 0.508,
+      "pick_rate": 0.085,
+      "avg_kda": 3.61,
+      "games": 262,
+      "champion": "Janna"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 282,
+      "win_rate": 0.505,
+      "pick_rate": 0.181,
+      "avg_kda": 2.44,
+      "games": 558,
+      "champion": "Nautilus"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.5,
+      "pick_rate": 0.003,
+      "avg_kda": 2.55,
+      "games": 10,
+      "champion": "Sejuani"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.5,
+      "pick_rate": 0.003,
+      "avg_kda": 2.26,
+      "games": 10,
+      "champion": "Skarner"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 30,
+      "win_rate": 0.5,
+      "pick_rate": 0.019,
+      "avg_kda": 2.11,
+      "games": 60,
+      "champion": "Elise"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 8,
+      "win_rate": 0.5,
+      "pick_rate": 0.005,
+      "avg_kda": 2.57,
+      "games": 16,
+      "champion": "Leblanc"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 200,
+      "win_rate": 0.487,
+      "pick_rate": 0.133,
+      "avg_kda": 3.0,
+      "games": 411,
+      "champion": "Karma"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 226,
+      "win_rate": 0.484,
+      "pick_rate": 0.151,
+      "avg_kda": 3.2,
+      "games": 467,
+      "champion": "Bard"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 104,
+      "win_rate": 0.473,
+      "pick_rate": 0.071,
+      "avg_kda": 2.21,
+      "games": 220,
+      "champion": "Pyke"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 68,
+      "win_rate": 0.472,
+      "pick_rate": 0.047,
+      "avg_kda": 2.55,
+      "games": 144,
+      "champion": "Blitzcrank"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 86,
+      "win_rate": 0.47,
+      "pick_rate": 0.059,
+      "avg_kda": 3.17,
+      "games": 183,
+      "champion": "Nami"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 43,
+      "win_rate": 0.467,
+      "pick_rate": 0.03,
+      "avg_kda": 2.58,
+      "games": 92,
+      "champion": "Sona"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 14,
+      "win_rate": 0.467,
+      "pick_rate": 0.01,
+      "avg_kda": 2.3,
+      "games": 30,
+      "champion": "Zoe"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 40,
+      "win_rate": 0.46,
+      "pick_rate": 0.028,
+      "avg_kda": 2.25,
+      "games": 87,
+      "champion": "Velkoz"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 78,
+      "win_rate": 0.451,
+      "pick_rate": 0.056,
+      "avg_kda": 3.16,
+      "games": 173,
+      "champion": "Rakan"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 17,
+      "win_rate": 0.447,
+      "pick_rate": 0.012,
+      "avg_kda": 3.74,
+      "games": 38,
+      "champion": "Renata"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 91,
+      "win_rate": 0.44,
+      "pick_rate": 0.067,
+      "avg_kda": 2.52,
+      "games": 207,
+      "champion": "Leona"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 25,
+      "win_rate": 0.439,
+      "pick_rate": 0.018,
+      "avg_kda": 1.78,
+      "games": 57,
+      "champion": "Camille"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 23,
+      "win_rate": 0.426,
+      "pick_rate": 0.017,
+      "avg_kda": 2.06,
+      "games": 54,
+      "champion": "Poppy"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 31,
+      "win_rate": 0.425,
+      "pick_rate": 0.024,
+      "avg_kda": 2.48,
+      "games": 73,
+      "champion": "Neeko"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 16,
+      "win_rate": 0.421,
+      "pick_rate": 0.012,
+      "avg_kda": 2.42,
+      "games": 38,
+      "champion": "Galio"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 5,
+      "win_rate": 0.385,
+      "pick_rate": 0.004,
+      "avg_kda": 2.1,
+      "games": 13,
+      "champion": "FiddleSticks"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 4,
+      "win_rate": 0.364,
+      "pick_rate": 0.004,
+      "avg_kda": 2.44,
+      "games": 11,
+      "champion": "Ornn"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 10,
+      "win_rate": 0.357,
+      "pick_rate": 0.009,
+      "avg_kda": 2.73,
+      "games": 28,
+      "champion": "Morgana"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 26,
+      "win_rate": 0.338,
+      "pick_rate": 0.025,
+      "avg_kda": 1.75,
+      "games": 77,
+      "champion": "Pantheon"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.333,
+      "pick_rate": 0.007,
+      "avg_kda": 2.11,
+      "games": 21,
+      "champion": "Mel"
+    },
+    {
+      "team_position": "UTILITY",
+      "patch": "16.11",
+      "wins": 7,
+      "win_rate": 0.318,
+      "pick_rate": 0.007,
+      "avg_kda": 2.23,
+      "games": 22,
+      "champion": "Shaco"
     },
     {
       "team_position": "UTILITY",
@@ -3254,9 +3374,9 @@
       "wins": 3,
       "win_rate": 0.25,
       "pick_rate": 0.004,
-      "avg_kda": 2.23,
+      "avg_kda": 2.44,
       "games": 12,
-      "champion": "Ornn"
+      "champion": "Nidalee"
     }
   ]
 }

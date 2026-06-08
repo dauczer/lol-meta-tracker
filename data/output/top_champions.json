@@ -1,81 +1,81 @@
 {
   "TOP": [
     {
-      "win_rate": 0.778,
-      "pick_rate": 0.006,
-      "avg_kda": 3.16,
-      "games": 18,
-      "champion": "Leblanc"
+      "win_rate": 0.9,
+      "pick_rate": 0.003,
+      "avg_kda": 2.8,
+      "games": 10,
+      "champion": "KogMaw"
     },
     {
-      "win_rate": 0.667,
-      "pick_rate": 0.005,
-      "avg_kda": 2.15,
-      "games": 15,
-      "champion": "Ekko"
+      "win_rate": 0.846,
+      "pick_rate": 0.004,
+      "avg_kda": 2.84,
+      "games": 13,
+      "champion": "Galio"
     }
   ],
   "JUNGLE": [
     {
-      "win_rate": 0.7,
-      "pick_rate": 0.004,
-      "avg_kda": 3.3,
-      "games": 10,
-      "champion": "Poppy"
+      "win_rate": 0.615,
+      "pick_rate": 0.017,
+      "avg_kda": 3.34,
+      "games": 52,
+      "champion": "Evelynn"
     },
     {
-      "win_rate": 0.692,
-      "pick_rate": 0.009,
-      "avg_kda": 4.55,
-      "games": 26,
-      "champion": "Zac"
+      "win_rate": 0.6,
+      "pick_rate": 0.029,
+      "avg_kda": 3.07,
+      "games": 90,
+      "champion": "Aatrox"
     }
   ],
   "MIDDLE": [
     {
-      "win_rate": 0.833,
+      "win_rate": 0.818,
       "pick_rate": 0.004,
-      "avg_kda": 6.97,
-      "games": 12,
-      "champion": "Swain"
+      "avg_kda": 2.8,
+      "games": 11,
+      "champion": "Jax"
     },
     {
       "win_rate": 0.727,
-      "pick_rate": 0.004,
-      "avg_kda": 2.21,
-      "games": 11,
-      "champion": "KSante"
+      "pick_rate": 0.007,
+      "avg_kda": 3.56,
+      "games": 22,
+      "champion": "Karthus"
     }
   ],
   "BOTTOM": [
     {
-      "win_rate": 0.696,
-      "pick_rate": 0.008,
-      "avg_kda": 2.9,
-      "games": 23,
-      "champion": "Zyra"
+      "win_rate": 0.7,
+      "pick_rate": 0.003,
+      "avg_kda": 3.31,
+      "games": 10,
+      "champion": "Rumble"
     },
     {
-      "win_rate": 0.655,
-      "pick_rate": 0.02,
-      "avg_kda": 3.23,
-      "games": 55,
-      "champion": "Ziggs"
+      "win_rate": 0.65,
+      "pick_rate": 0.006,
+      "avg_kda": 2.58,
+      "games": 20,
+      "champion": "TahmKench"
     }
   ],
   "UTILITY": [
     {
-      "win_rate": 0.619,
-      "pick_rate": 0.007,
-      "avg_kda": 2.09,
-      "games": 21,
-      "champion": "Sion"
+      "win_rate": 0.706,
+      "pick_rate": 0.005,
+      "avg_kda": 2.43,
+      "games": 17,
+      "champion": "Amumu"
     },
     {
-      "win_rate": 0.6,
-      "pick_rate": 0.004,
-      "avg_kda": 3.06,
-      "games": 10,
+      "win_rate": 0.682,
+      "pick_rate": 0.007,
+      "avg_kda": 3.17,
+      "games": 22,
       "champion": "Gragas"
     }
   ]
