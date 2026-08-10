@@ -1,82 +1,82 @@
 {
   "TOP": [
     {
-      "win_rate": 0.704,
-      "pick_rate": 0.012,
-      "avg_kda": 1.57,
-      "games": 27,
-      "champion": "Warwick"
+      "win_rate": 0.818,
+      "pick_rate": 0.005,
+      "avg_kda": 4.78,
+      "games": 11,
+      "champion": "AurelionSol"
     },
     {
-      "win_rate": 0.7,
-      "pick_rate": 0.005,
-      "avg_kda": 3.65,
-      "games": 10,
-      "champion": "Zilean"
+      "win_rate": 0.688,
+      "pick_rate": 0.014,
+      "avg_kda": 1.92,
+      "games": 32,
+      "champion": "Chogath"
     }
   ],
   "JUNGLE": [
     {
-      "win_rate": 0.692,
-      "pick_rate": 0.006,
-      "avg_kda": 2.83,
-      "games": 13,
-      "champion": "Evelynn"
+      "win_rate": 0.636,
+      "pick_rate": 0.005,
+      "avg_kda": 3.02,
+      "games": 11,
+      "champion": "Fizz"
     },
     {
-      "win_rate": 0.688,
-      "pick_rate": 0.007,
-      "avg_kda": 3.29,
-      "games": 16,
-      "champion": "Zed"
+      "win_rate": 0.636,
+      "pick_rate": 0.009,
+      "avg_kda": 3.54,
+      "games": 22,
+      "champion": "Poppy"
     }
   ],
   "MIDDLE": [
     {
-      "win_rate": 0.7,
-      "pick_rate": 0.009,
-      "avg_kda": 3.89,
-      "games": 20,
-      "champion": "AurelionSol"
+      "win_rate": 0.769,
+      "pick_rate": 0.006,
+      "avg_kda": 2.22,
+      "games": 13,
+      "champion": "Ezreal"
     },
     {
-      "win_rate": 0.643,
-      "pick_rate": 0.006,
-      "avg_kda": 4.09,
-      "games": 14,
-      "champion": "Singed"
+      "win_rate": 0.684,
+      "pick_rate": 0.008,
+      "avg_kda": 2.46,
+      "games": 19,
+      "champion": "Talon"
     }
   ],
   "BOTTOM": [
     {
-      "win_rate": 0.867,
-      "pick_rate": 0.007,
-      "avg_kda": 4.15,
-      "games": 15,
-      "champion": "Jax"
+      "win_rate": 0.684,
+      "pick_rate": 0.008,
+      "avg_kda": 2.58,
+      "games": 19,
+      "champion": "Anivia"
     },
     {
-      "win_rate": 0.786,
-      "pick_rate": 0.006,
-      "avg_kda": 2.62,
-      "games": 14,
-      "champion": "TwistedFate"
+      "win_rate": 0.68,
+      "pick_rate": 0.011,
+      "avg_kda": 2.87,
+      "games": 25,
+      "champion": "Katarina"
     }
   ],
   "UTILITY": [
     {
-      "win_rate": 0.727,
-      "pick_rate": 0.01,
-      "avg_kda": 3.42,
-      "games": 22,
-      "champion": "Leblanc"
+      "win_rate": 0.667,
+      "pick_rate": 0.006,
+      "avg_kda": 2.11,
+      "games": 15,
+      "champion": "Quinn"
     },
     {
-      "win_rate": 0.7,
-      "pick_rate": 0.005,
-      "avg_kda": 2.58,
-      "games": 10,
-      "champion": "Xerath"
+      "win_rate": 0.643,
+      "pick_rate": 0.006,
+      "avg_kda": 2.3,
+      "games": 14,
+      "champion": "Vi"
     }
   ]
 }
