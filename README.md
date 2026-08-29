@@ -2,9 +2,9 @@
 
 A data pipeline that answers one question every week: **which champions are dominating high-elo League of Legends right now?**
 
-It pulls ranked match data from the Riot API (Challenger + Grandmaster, EUW), crunches the numbers, and spits out clean JSON files that my portfolio website reads directly. Everything runs on GitHub Actions. Total cost: zero.
+It pulls ranked match data from the Riot API (Challenger + Grandmaster, EUW), crunches the numbers, and publishes static JSON files that my portfolio website reads directly. Everything runs on GitHub Actions. Total infrastructure cost: zero.
 
-This is a portfolio project, but it's built the way I'd build a production pipeline — modular stages, crash-safe caching, idempotent reruns, automated delivery — just with lighter tools. Every tool choice maps to an enterprise equivalent (see below), which is the actual point: showing I understand what scales and what doesn't.
+This is deliberately a small batch pipeline: one data source, one weekly schedule, an in-memory transform, and versioned static outputs. The implementation focuses on reproducible snapshots and honest failure modes rather than production-scale infrastructure the project does not need.
 
 ---
 
@@ -17,15 +17,16 @@ This is a portfolio project, but it's built the way I'd build a production pipel
 │  ┌──────────┐    ┌──────────────┐    ┌──────────┐               │
 │  │  INGEST  │───>│  TRANSFORM   │───>│  OUTPUT  │               │
 │  │          │    │              │    │          │               │
-│  │ Riot API │    │ pandas agg   │    │ 3 JSONs  │               │
+│  │ Riot API │    │ pandas agg   │    │ 4 JSONs  │               │
 │  │ -> raw/  │    │ filter+stats │    │ -> output│               │
 │  └──────────┘    └──────────────┘    └──────────┘               │
 │       │                                    │                    │
 │       v                                    v                    │
 │  data/raw/YYYY-MM-DD/              data/output/                 │
 │  data/cache/puuids.json            ├─ meta_summary.json         │
-│  data/cache/processed_matches.json ├─ top_champions.json        │
-│                                    └─ champions_by_role.json    │
+│  (raw + cache persisted by CI)     ├─ top_champions.json        │
+│                                    ├─ champions_by_role.json    │
+│                                    └─ portfolio_snapshot.json   │
 │                                         │                       │
 │                                    git commit + push            │
 └─────────────────────────────────────────────────────────────────┘
@@ -38,87 +39,72 @@ Three stages, each its own module:
 
 1. **Ingest** — Fetches ~1000 high-elo players, resolves their PUUIDs, grabs their last 5 ranked matches (deduped), and saves raw JSON to disk. A dual-bucket rate limiter (20 req/s *and* 100 req/2min) keeps us within Riot's limits, and a 403-counter detects expired API keys within 3 requests instead of burning retries for 30 minutes.
 
-2. **Transform** — Parses 10 participant rows per match, filters remakes (< 15 min) and missing roles, then aggregates by champion + role + patch: win rate, pick rate, avg KDA. Selects the top 2 per role with a minimum 10-game threshold.
+2. **Transform** — Parses 10 participant rows per match, filters remakes (< 15 min) and missing roles, then aggregates by champion + role + patch: win rate, pick rate, and aggregate KDA ratio.
 
-3. **Output** — Writes three JSON files with atomic writes (temp file + `os.replace()`) so a crash mid-write can't produce a half-written file.
+3. **Output** — Writes four JSON files atomically. The portfolio payload ranks three champions per role with a 30-game minimum and the lower bound of a 95% Wilson interval, then compares pick rates with the previous run when both snapshots belong to the same patch.
 
-The whole run takes 10–15 minutes, well within GitHub Actions' free tier.
+A cold run normally takes about 60–80 minutes under a Riot Personal API key's 100 requests / 2 minutes limit. A warm rerun can reuse cached raw matches and is faster.
 
 ---
 
 ## Design Decisions Worth Knowing About
 
-**Idempotent reruns.** A `processed_matches.json` cache tracks every match already fetched. Re-running the pipeline on the same day doesn't re-fetch anything. The PUUID cache works the same way — PUUIDs never change, so that cache grows forever and never needs invalidation.
+**Complete, rerunnable snapshots.** Every run resolves the complete current set of match IDs. Raw files restored from the Actions cache are reused, missing matches are fetched, and the current date partition is rebuilt before old partitions are pruned. If the cache is unavailable, the same run performs a cold refresh instead of publishing only a partial delta.
 
-**Crash safety.** The PUUID cache saves every 100 lookups, not just at the end. The processed-matches cache updates after each match fetch. If the pipeline dies at minute 14 of a 15-minute run, it picks up where it left off.
+**Crash safety.** Cache and raw JSON writes are atomic. The workflow saves `data/cache` and `data/raw` even after a failed pipeline step, allowing a later run to reuse completed downloads when GitHub provides the saved cache.
 
-**Dry-run mode.** `--dry-run` skips all API calls and re-uses the most recent raw data partition. This is how I iterated on the transform layer without burning API quota — the portfolio equivalent of a staging environment.
+**Dry-run mode.** `--dry-run` skips all API calls and reuses the most recent local raw partition. A fresh clone has no raw data, so it needs one successful full run before dry-run mode is available.
 
 **No database.** The entire dataset is a few MB. Pandas handles it in memory in seconds. A database would add migrations, backups, and connection management for zero benefit at this scale.
 
 ---
 
-## Enterprise vs Portfolio
-
-The point of this table isn't to apologize for using simple tools. It's to show I know what the production version looks like and why I didn't need it here.
-
-| What I used | What a company would use | Why the swap works |
-|---|---|---|
-| GitHub Actions cron | Airflow, Prefect, Dagster | Both are scheduled orchestrators. Actions can't do backfills or task-level retries, but handles a single weekly job fine. |
-| pandas in-memory | Snowflake / BigQuery + dbt | Data is a few MB. No warehouse needed. The `pipeline-enterprise/dbt/` folder shows what the SQL version looks like. |
-| `data/raw/` in Git | S3 / GCS data lake | Git versions files naturally. Would hit repo size limits at production volume. |
-| Python transform scripts | dbt models | dbt shines on SQL warehouses with testing and lineage. The enterprise reference includes equivalent dbt models. |
-| JSON files committed to Git | API endpoint + database | Works because data updates weekly and the frontend just fetches static files. No query flexibility. |
-| `time.sleep()` rate limiter | API gateway, queue with backpressure | In-process, single-node, doesn't survive restarts. Fine for a batch job. |
-| `.env` file | Secrets Manager, Vault | GitHub Secrets handles CI. Locally, `.env` is good enough. |
-| `logging` to stdout | Datadog, OpenTelemetry | Actions captures stdout. In prod, you'd want searchable, alertable logs. |
-| `tenacity` retries | Circuit breakers, dead-letter queues | Failed items should go to a DLQ at scale. Here, in-process retry is sufficient. |
-
-See [`pipeline-enterprise/`](pipeline-enterprise/) for reference implementations: an Airflow DAG, dbt models, and a docker-compose stack.
-
----
-
 ## Output
 
-The portfolio site consumes `top_champions.json`:
+The portfolio site consumes `portfolio_snapshot.json`, a self-contained payload with scope, sample size, methodology, role leaders, freshness, and same-patch weekly movements:
 
 ```json
 {
-  "TOP": [
-    {"champion": "Ambessa", "win_rate": 0.532, "pick_rate": 0.124, "games": 87, "avg_kda": 3.21},
-    {"champion": "K'Sante", "win_rate": 0.518, "pick_rate": 0.087, "games": 61, "avg_kda": 2.94}
-  ],
-  "JUNGLE": ["..."],
-  "MIDDLE": ["..."],
-  "BOTTOM": ["..."],
-  "UTILITY": ["..."]
+  "schema_version": 2,
+  "generated_at": "2026-08-24T07:39:28Z",
+  "scope": {"patch": "16.16", "region": "EUW", "lookback_days": 7},
+  "sample": {"matches": 2354, "champions": 173},
+  "roles": {
+    "TOP": {
+      "leaders": [
+        {"rank": 1, "champion": "Gragas", "win_rate": 0.7, "games": 70}
+      ]
+    }
+  }
 }
 ```
 
-Also generated: `meta_summary.json` (patch, region, match count, timestamp) and `champions_by_role.json` (full stats for all champions, not just top 2).
+The existing files remain available: `meta_summary.json`, `top_champions.json`, and `champions_by_role.json`.
+
+The live payload is available directly at [`data/output/portfolio_snapshot.json`](data/output/portfolio_snapshot.json). Movers require at least 30 games in both snapshots and a pick-rate change of at least 0.5 percentage points.
 
 ---
 
 ## Quick Start
 
-**Prerequisites**: Python 3.11+, a [Riot API key](https://developer.riotgames.com)
+**Prerequisites**: Python 3.11, a [Riot API key](https://developer.riotgames.com)
 
 > Apply for a *Personal Project* key if you can — it doesn't expire every 24 hours. Takes a few days for Riot to approve.
 
 ```bash
 git clone <repo-url> && cd lol-meta-tracker
-pip install -r requirements.txt
+pip install -r requirements.lock
 
 cp .env.example .env
 # Edit .env → set RIOT_API_KEY
 
 python scripts/test_api_key.py        # Verify your key works
-python -m pipeline.main               # Full run (~10-15 min)
-python -m pipeline.main --dry-run     # Skip API, reuse cached data
+python -m pipeline.main               # Cold run (~60-80 min with a Personal key)
+python -m pipeline.main --dry-run     # Requires raw data from a previous run
 pytest tests/ -v                      # Run tests (API test auto-skipped without key)
 ```
 
-**GitHub Actions**: Push to GitHub, add `RIOT_API_KEY` as a repository secret, trigger manually from Actions > Weekly Meta Refresh > Run workflow. After that, it runs every Monday at 06:00 UTC.
+**GitHub Actions**: Push to GitHub, add `RIOT_API_KEY` as a repository secret, then trigger Actions > Weekly Meta Refresh > Run workflow. The cron is scheduled for every Monday at 06:00 UTC; GitHub may start scheduled jobs later during busy periods.
 
 ---
 
@@ -132,18 +118,14 @@ lol-meta-tracker/
 │   ├── transform.py           # Parse, filter, aggregate with pandas
 │   ├── output.py              # Atomic JSON writers
 │   └── main.py                # Orchestrator (--dry-run flag)
-├── pipeline-enterprise/       # What this would look like at scale
-│   ├── airflow/dags/          # Airflow DAG (ingest >> transform >> output)
-│   ├── dbt/models/            # SQL equivalents of transform.py
-│   └── docker-compose.yml     # Local Airflow + Postgres
 ├── data/
 │   ├── raw/                   # Raw API responses, partitioned by date (gitignored)
-│   ├── cache/                 # PUUID + processed-match caches (gitignored)
+│   ├── cache/                 # Local PUUID cache (gitignored)
 │   └── output/                # Final JSONs (committed by CI)
-├── tests/                     # 40+ tests
-│   ├── test_ingest.py         # 13 mocked API tests (zero network I/O)
-│   ├── test_transform.py      # 20+ unit tests with fixture data
-│   ├── test_output.py         # 7 serialization tests
+├── tests/                     # 50 offline tests + 2 live API smoke tests
+│   ├── test_ingest.py         # Mocked API, caching and failure tests
+│   ├── test_transform.py      # Parsing and aggregation tests
+│   ├── test_output.py         # Output schema and comparison tests
 │   ├── test_api_connection.py # Live smoke test (skipped without key)
 │   └── fixtures/              # Sample match JSON
 ├── scripts/
@@ -163,10 +145,16 @@ lol-meta-tracker/
 | **Tiers** | Challenger + Grandmaster (~1000 players) |
 | **Queue** | Ranked Solo/Duo (queueId 420) |
 | **API calls/run** | ~3000–5000 |
-| **Unique matches/run** | ~1500–3000 |
-| **Runtime** | 10–15 minutes |
+| **Unique matches/run** | ~2300–4000 in observed runs |
+| **Runtime** | ~60–80 minutes cold; faster when raw matches are reused |
 
-Tight scope is intentional — it keeps us well within Riot's rate limits and GitHub Actions' 2000 free minutes/month.
+Tight scope is intentional: the pipeline stays within Riot's Personal key limits while producing a useful weekly sample.
+
+---
+
+## Riot Games Notice
+
+LoL Meta Tracker is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
 ---
 

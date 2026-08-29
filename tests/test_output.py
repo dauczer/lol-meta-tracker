@@ -15,6 +15,7 @@ from pipeline.output import (
     _clean_record,
     write_champions_by_role,
     write_meta_summary,
+    write_portfolio_snapshot,
     write_top_champions,
 )
 
@@ -117,3 +118,107 @@ class TestWriteChampionsByRole:
         assert "Ambessa" in top_names
         assert "Teemo" not in top_names   # below min_games
         assert "Darius" not in top_names  # wrong patch
+
+
+class TestWritePortfolioSnapshot:
+    def _stats(self) -> pd.DataFrame:
+        rows = []
+        for index, role in enumerate(["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]):
+            rows.extend([
+                {
+                    "patch": "14.7",
+                    "champion_name": f"{role}Reliable",
+                    "team_position": role,
+                    "games_played": 100,
+                    "wins": 60 - index,
+                    "win_rate": (60 - index) / 100,
+                    "pick_rate": 0.10 + index * 0.01,
+                    "avg_kda": 3.0,
+                },
+                {
+                    "patch": "14.7",
+                    "champion_name": f"{role}SmallSample",
+                    "team_position": role,
+                    "games_played": 10,
+                    "wins": 10,
+                    "win_rate": 1.0,
+                    "pick_rate": 0.01,
+                    "avg_kda": 5.0,
+                },
+            ])
+        return pd.DataFrame(rows)
+
+    def _previous_by_role(self) -> dict[str, list[dict[str, object]]]:
+        result: dict[str, list[dict[str, object]]] = {}
+        roles = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
+        for index, role in enumerate(roles):
+            current_pick_rate = 0.10 + index * 0.01
+            previous_pick_rate = (
+                current_pick_rate - 0.02 if index < 3 else current_pick_rate + 0.02
+            )
+            result[role] = [{
+                "champion": f"{role}Reliable",
+                "games": 90,
+                "pick_rate": previous_pick_rate,
+            }]
+        return result
+
+    def test_writes_self_contained_schema_and_filters_small_samples(
+        self,
+        tmp_path: Path,
+    ) -> None:
+        write_portfolio_snapshot(
+            self._stats(),
+            total_matches=500,
+            patch="14.7",
+            output_dir=tmp_path,
+            generated_at="2026-04-04T06:00:00Z",
+            total_champions=999,
+        )
+
+        data = json.loads((tmp_path / "portfolio_snapshot.json").read_text())
+        assert data["schema_version"] == 2
+        assert data["generated_at"] == "2026-04-04T06:00:00Z"
+        assert data["scope"]["patch"] == "14.7"
+        assert data["sample"]["matches"] == 500
+        assert data["sample"]["champions"] == 999
+        assert data["methodology"]["ranking"] == "wilson_lower_bound_95"
+        assert data["comparison"]["available"] is False
+        assert set(data["roles"]) == {"TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"}
+        assert data["roles"]["TOP"]["leaders"][0]["champion"] == "TOPReliable"
+        assert "SmallSample" not in json.dumps(data["roles"])
+
+    def test_computes_same_patch_movers(self, tmp_path: Path) -> None:
+        write_portfolio_snapshot(
+            self._stats(),
+            total_matches=500,
+            patch="14.7",
+            output_dir=tmp_path,
+            generated_at="2026-04-11T06:00:00Z",
+            previous_meta={"patch": "14.7", "last_updated": "2026-04-04T06:00:00Z"},
+            previous_by_role=self._previous_by_role(),
+        )
+
+        data = json.loads((tmp_path / "portfolio_snapshot.json").read_text())
+        assert data["comparison"]["available"] is True
+        assert data["comparison"]["same_patch"] is True
+        assert data["movers"]["up"]
+        assert data["movers"]["down"]
+        assert all(row["pick_rate_delta"] > 0 for row in data["movers"]["up"])
+        assert all(row["pick_rate_delta"] < 0 for row in data["movers"]["down"])
+
+    def test_disables_comparison_across_patch_change(self, tmp_path: Path) -> None:
+        write_portfolio_snapshot(
+            self._stats(),
+            total_matches=500,
+            patch="14.7",
+            output_dir=tmp_path,
+            generated_at="2026-04-11T06:00:00Z",
+            previous_meta={"patch": "14.6", "last_updated": "2026-04-04T06:00:00Z"},
+            previous_by_role=self._previous_by_role(),
+        )
+
+        data = json.loads((tmp_path / "portfolio_snapshot.json").read_text())
+        assert data["comparison"]["available"] is False
+        assert data["comparison"]["reason"] == "patch_changed"
+        assert data["movers"] == {"up": [], "down": []}

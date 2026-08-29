@@ -41,6 +41,8 @@ TIERS: list[str] = ["CHALLENGER", "GRANDMASTER"]
 QUEUE_ID: int = 420  # Ranked Solo/Duo
 MATCHES_PER_PLAYER: int = 5
 MATCH_LOOKBACK_DAYS: int = 7  # only fetch matches from the last N days
+MAX_PLAYER_FAILURE_RATIO: float = 0.05
+MAX_MATCH_FAILURE_RATIO: float = 0.05
 
 # ---------------------------------------------------------------------------
 # Rate limits (personal API key)
@@ -54,6 +56,9 @@ RATE_LIMIT_PER_2MIN: int = 100
 MIN_GAME_DURATION: int = 900  # seconds — exclude remakes
 MIN_GAMES_THRESHOLD: int = 10  # minimum games for top-champion selection
 TOP_N_PER_ROLE: int = 2
+PORTFOLIO_TOP_N_PER_ROLE: int = 3
+PORTFOLIO_MIN_GAMES: int = 30
+MIN_PICK_RATE_MOVEMENT: float = 0.005
 ROLES: list[str] = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
 
 # ---------------------------------------------------------------------------
@@ -65,4 +70,3 @@ RAW_DIR: Path = DATA_DIR / "raw"
 OUTPUT_DIR: Path = DATA_DIR / "output"
 CACHE_DIR: Path = DATA_DIR / "cache"
 PUUID_CACHE_FILE: Path = CACHE_DIR / "puuids.json"
-PROCESSED_MATCHES_FILE: Path = CACHE_DIR / "processed_matches.json"

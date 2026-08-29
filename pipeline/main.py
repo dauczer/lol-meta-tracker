@@ -14,8 +14,11 @@ import sys
 from pipeline import config
 from pipeline.ingest import run_ingestion
 from pipeline.output import (
+    current_utc_timestamp,
+    load_previous_outputs,
     write_champions_by_role,
     write_meta_summary,
+    write_portfolio_snapshot,
     write_top_champions,
 )
 from pipeline.transform import (
@@ -85,10 +88,30 @@ def main() -> None:
     # Stage 3: Output
     # ------------------------------------------------------------------
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    previous_meta, previous_by_role = load_previous_outputs(config.OUTPUT_DIR)
+    generated_at = current_utc_timestamp()
 
-    write_meta_summary(stats, total_matches, patch, config.OUTPUT_DIR)
+    write_meta_summary(
+        stats,
+        total_matches,
+        patch,
+        config.OUTPUT_DIR,
+        generated_at=generated_at,
+    )
     write_top_champions(top, config.OUTPUT_DIR)
     write_champions_by_role(stats, patch, config.OUTPUT_DIR)
+    write_portfolio_snapshot(
+        stats,
+        total_matches,
+        patch,
+        config.OUTPUT_DIR,
+        generated_at,
+        previous_meta,
+        previous_by_role,
+        total_champions=int(
+            stats[stats["patch"] == patch]["champion_name"].nunique()
+        ),
+    )
 
     logger.info(
         "Stage 3 complete: output written to %s.", config.OUTPUT_DIR

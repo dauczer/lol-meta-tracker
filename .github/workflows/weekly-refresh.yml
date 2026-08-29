@@ -31,10 +31,13 @@ jobs:
         run: pip install -r requirements.lock
 
       - name: Restore pipeline cache
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
+        continue-on-error: true
         with:
-          path: data/cache
-          key: pipeline-cache-${{ github.run_id }}
+          path: |
+            data/cache
+            data/raw
+          key: pipeline-cache-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             pipeline-cache-
 
@@ -47,6 +50,16 @@ jobs:
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
         run: python -m pipeline.main
+
+      - name: Save pipeline cache
+        if: always()
+        uses: actions/cache/save@v4
+        continue-on-error: true
+        with:
+          path: |
+            data/cache
+            data/raw
+          key: pipeline-cache-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Commit and push updated output
         run: |

@@ -77,7 +77,9 @@ def check_challenger_players() -> None:
     print(f"  Challenger players in EUW: {len(players)}")
     if players:
         sample = players[0]
-        print(f"  Sample entry: {sample.get('summonerName', 'N/A')} ({sample.get('leaguePoints', 0)} LP)")
+        name = sample.get("summonerName", "N/A")
+        league_points = sample.get("leaguePoints", 0)
+        print(f"  Sample entry: {name} ({league_points} LP)")
 
 
 def main() -> None:
