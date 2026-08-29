@@ -6,8 +6,8 @@ Fetches raw match data from the Riot API and persists it to disk.
 Flow:
   1. get_high_elo_players()  — LEAGUE-EXP-V4: Challenger / Grandmaster
   2. resolve_puuids()        — SUMMONER-V4, with local cache
-  3. get_match_ids()         — MATCH-V5 list, deduped, skipping processed matches
-  4. fetch_match_details()   — MATCH-V5 detail, saved to data/raw/{date}/matches/
+  3. get_match_ids()         — MATCH-V5 list, deduped into the current snapshot
+  4. fetch_match_details()   — reuse cached raws, fetch misses, save current partition
   5. run_ingestion()         — orchestrates all of the above
 """
 from __future__ import annotations
@@ -15,7 +15,9 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import os
 import re
+import shutil
 import time
 from collections import deque
 from datetime import date, datetime, timedelta, timezone
@@ -50,8 +52,7 @@ class RateLimiter:
     Dual-bucket token limiter: 20 req/1 s AND 100 req/2 min.
 
     Blocks the calling thread until a request slot is available in both
-    windows.  Uses a 50 ms polling interval — low overhead for a single-
-    threaded pipeline.
+    windows, sleeping exactly until the next slot opens.
 
     Also tracks consecutive 403 responses to detect an expired API key;
     raises RuntimeError after MAX_CONSECUTIVE_403S failures.
@@ -208,33 +209,16 @@ def _load_cache(path: Path) -> dict[str, Any]:
     return {}
 
 
+def _atomic_json_write(path: Path, data: object) -> None:
+    """Write JSON atomically so interrupted writes cannot corrupt cached data."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, indent=2))
+    os.replace(tmp, path)
+
+
 def _save_cache(path: Path, data: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w") as f:
-        json.dump(data, f, indent=2)
-
-
-def _load_processed_matches(path: Path) -> set[str]:
-    """Load the set of processed match IDs.
-
-    Supports both the new list format and the legacy dict[str, bool] format
-    so existing caches are not broken on first upgrade.
-    """
-    if not path.exists():
-        return set()
-    with path.open() as f:
-        raw = json.load(f)
-    if isinstance(raw, list):
-        return set(raw)
-    # Legacy dict format: {"matchId": true, ...}
-    return set(raw.keys())
-
-
-def _save_processed_matches(path: Path, match_ids: set[str]) -> None:
-    """Persist processed match IDs as a JSON array."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w") as f:
-        json.dump(sorted(match_ids), f, indent=2)
+    _atomic_json_write(path, data)
 
 
 def resolve_puuids(players: list[dict[str, Any]]) -> dict[str, str]:
@@ -297,12 +281,11 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
     """
     Fetch up to MATCHES_PER_PLAYER recent ranked match IDs per player.
 
-    Deduplicates across players and subtracts already-processed match IDs
-    from data/cache/processed_matches.json.
+    Deduplicates across players. The complete returned set defines the current
+    snapshot; raw files from earlier runs are reused later when possible.
 
-    Returns: list of new, unique match IDs to fetch.
+    Returns: list of current, unique match IDs.
     """
-    processed: set[str] = _load_processed_matches(config.PROCESSED_MATCHES_FILE)
     all_ids: set[str] = set()
 
     puuids = list(puuid_map.values())
@@ -340,14 +323,46 @@ def get_match_ids(puuid_map: dict[str, str]) -> list[str]:
     if skipped:
         logger.warning("Skipped %d / %d players due to network errors.", skipped, len(puuids))
 
-    new_ids = [mid for mid in all_ids if mid not in processed]
-    logger.info(
-        "Match IDs: %d total, %d already processed, %d new.",
-        len(all_ids),
-        len(all_ids) - len(new_ids),
-        len(new_ids),
+    failure_ratio = skipped / len(puuids) if puuids else 0.0
+    if failure_ratio > config.MAX_PLAYER_FAILURE_RATIO:
+        raise RuntimeError(
+            f"{skipped}/{len(puuids)} player match lists ({failure_ratio:.1%}) failed; "
+            "refusing to publish an incomplete snapshot."
+        )
+
+    match_ids = sorted(all_ids)
+    logger.info("Match IDs: %d current unique matches.", len(match_ids))
+    return match_ids
+
+
+def _existing_raw_match_index() -> dict[str, Path]:
+    """Index cached raw match files from valid date partitions by match ID."""
+    if not config.RAW_DIR.exists():
+        return {}
+
+    index: dict[str, Path] = {}
+    date_dirs = sorted(
+        d for d in config.RAW_DIR.iterdir()
+        if d.is_dir() and _ISO_DATE_RE.match(d.name)
     )
-    return new_ids
+    for date_dir in date_dirs:
+        for path in (date_dir / "matches").glob("*.json"):
+            index[path.stem] = path
+    return index
+
+
+def _prune_old_raw_partitions(current_run_date: str) -> None:
+    """Keep only the completed current partition in the persisted cache."""
+    if not config.RAW_DIR.exists():
+        return
+
+    for path in config.RAW_DIR.iterdir():
+        if (
+            path.is_dir()
+            and _ISO_DATE_RE.match(path.name)
+            and path.name != current_run_date
+        ):
+            shutil.rmtree(path)
 
 
 def fetch_match_details(match_ids: list[str], run_date: str) -> list[Path]:
@@ -355,20 +370,33 @@ def fetch_match_details(match_ids: list[str], run_date: str) -> list[Path]:
     Fetch full match details for each match ID and save raw JSON to disk.
 
     Saves to: data/raw/{run_date}/matches/{matchId}.json
-    Updates processed_matches.json after each successful save (crash-safe).
+    Reuses matching raw files from an earlier cached partition. All current
+    match files are copied into the new partition before older partitions are
+    pruned, so the returned dataset is complete and rerunnable.
 
     Returns: list of file paths written.
     """
     out_dir = config.RAW_DIR / run_date / "matches"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    processed: set[str] = _load_processed_matches(config.PROCESSED_MATCHES_FILE)
+    existing = _existing_raw_match_index()
     saved_paths: list[Path] = []
 
     logger.info("Fetching details for %d matches...", len(match_ids))
 
     skipped = 0
+    reused = 0
     for i, match_id in enumerate(match_ids):
+        file_path = out_dir / f"{match_id}.json"
+        cached_path = existing.get(match_id)
+
+        if cached_path is not None:
+            if cached_path != file_path:
+                shutil.copy2(cached_path, file_path)
+            saved_paths.append(file_path)
+            reused += 1
+            continue
+
         url = config.MATCH_DETAIL_URL.format(match_id=match_id)
         try:
             match_data = _api_get(url)
@@ -377,21 +405,30 @@ def fetch_match_details(match_ids: list[str], run_date: str) -> list[Path]:
             logger.warning("Skipping match %s after retries exhausted: %s", match_id, exc)
             continue
 
-        file_path = out_dir / f"{match_id}.json"
-        with file_path.open("w") as f:
-            json.dump(match_data, f, indent=2)
+        _atomic_json_write(file_path, match_data)
         saved_paths.append(file_path)
 
-        # Update cache immediately so a mid-run crash doesn't re-fetch
-        processed.add(match_id)
         if (i + 1) % 50 == 0:
-            _save_processed_matches(config.PROCESSED_MATCHES_FILE, processed)
             logger.info("  Fetched %d / %d matches...", i + 1, len(match_ids))
 
-    _save_processed_matches(config.PROCESSED_MATCHES_FILE, processed)
     if skipped:
         logger.warning("Skipped %d / %d matches due to network errors.", skipped, len(match_ids))
-    logger.info("Saved %d match files to %s.", len(saved_paths), out_dir)
+
+    failure_ratio = skipped / len(match_ids) if match_ids else 0.0
+    if failure_ratio > config.MAX_MATCH_FAILURE_RATIO:
+        raise RuntimeError(
+            f"{skipped}/{len(match_ids)} match details ({failure_ratio:.1%}) failed to download; "
+            "refusing to publish an incomplete snapshot."
+        )
+
+    _prune_old_raw_partitions(run_date)
+    logger.info(
+        "Current raw snapshot: %d matches (%d reused, %d fetched) in %s.",
+        len(saved_paths),
+        reused,
+        len(saved_paths) - reused,
+        out_dir,
+    )
     return saved_paths
 
 
@@ -401,13 +438,15 @@ _ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 def _latest_raw_files() -> list[Path]:
     """Return match JSON files from the most recent date partition.
 
-    Only directories whose name matches YYYY-MM-DD are considered, so
-    stray debug folders (e.g. '2099-01-01') or non-date entries are ignored.
+    Only directories whose name matches YYYY-MM-DD are considered.
     """
-    date_dirs = sorted(
-        d for d in config.RAW_DIR.iterdir()
-        if d.is_dir() and _ISO_DATE_RE.match(d.name)
-    )
+    if not config.RAW_DIR.exists():
+        date_dirs: list[Path] = []
+    else:
+        date_dirs = sorted(
+            d for d in config.RAW_DIR.iterdir()
+            if d.is_dir() and _ISO_DATE_RE.match(d.name)
+        )
     if not date_dirs:
         raise RuntimeError(
             "No raw data found in data/raw/. "
@@ -443,7 +482,9 @@ def run_ingestion(dry_run: bool = False) -> list[Path]:
     match_ids = get_match_ids(puuid_map)
 
     if not match_ids:
-        logger.info("No new matches to fetch. Pipeline complete.")
-        return _latest_raw_files()
+        raise RuntimeError(
+            "Riot returned no recent ranked matches for the selected players. "
+            "Refusing to reuse an unrelated older snapshot."
+        )
 
     return fetch_match_details(match_ids, run_date)

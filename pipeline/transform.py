@@ -43,6 +43,7 @@ def parse_matches(match_files: list[Path]) -> pd.DataFrame:
     malformed = 0
 
     for path in match_files:
+        match_rows: list[dict[str, Any]] = []
         try:
             with path.open() as f:
                 match = json.load(f)
@@ -59,7 +60,7 @@ def parse_matches(match_files: list[Path]) -> pd.DataFrame:
             patch = ".".join(game_version.split(".")[:2])
 
             for p in info["participants"]:
-                rows.append(
+                match_rows.append(
                     {
                         "match_id": match_id,
                         "champion_name": p["championName"],
@@ -72,6 +73,7 @@ def parse_matches(match_files: list[Path]) -> pd.DataFrame:
                         "patch": patch,
                     }
                 )
+            rows.extend(match_rows)
         except (KeyError, TypeError) as exc:
             logger.warning("Skipping malformed match %s: %s", path.name, exc)
             malformed += 1

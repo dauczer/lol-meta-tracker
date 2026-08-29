@@ -11,13 +11,13 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pytest
+import requests
 import responses as responses_lib
 
 from pipeline import config
 from pipeline.ingest import (
     RateLimiter,
     _load_cache,
-    _load_processed_matches,
     _save_cache,
     fetch_match_details,
     get_high_elo_players,
@@ -175,36 +175,47 @@ class TestResolvePuuids:
 
 class TestGetMatchIds:
     @responses_lib.activate
-    def test_deduplicates_match_ids(self, tmp_path: Path) -> None:
-        with patch.object(config, "PROCESSED_MATCHES_FILE", tmp_path / "processed.json"):
-            puuid_map = {"sid-1": "puuid-1", "sid-2": "puuid-2"}
+    def test_deduplicates_match_ids(self) -> None:
+        puuid_map = {"sid-1": "puuid-1", "sid-2": "puuid-2"}
 
-            for puuid in puuid_map.values():
-                url = config.MATCH_IDS_BY_PUUID_URL.format(puuid=puuid)
-                # Both players share the same match
-                responses_lib.add(
-                    responses_lib.GET,
-                    url,
-                    json=["EUW1_SHARED", f"EUW1_{puuid}_UNIQUE"],
-                )
+        for puuid in puuid_map.values():
+            url = config.MATCH_IDS_BY_PUUID_URL.format(puuid=puuid)
+            # Both players share the same match
+            responses_lib.add(
+                responses_lib.GET,
+                url,
+                json=["EUW1_SHARED", f"EUW1_{puuid}_UNIQUE"],
+            )
 
-            ids = get_match_ids(puuid_map)
-            assert len(ids) == 3  # 1 shared + 2 unique
-            assert "EUW1_SHARED" in ids
+        ids = get_match_ids(puuid_map)
+        assert len(ids) == 3  # 1 shared + 2 unique
+        assert "EUW1_SHARED" in ids
 
     @responses_lib.activate
-    def test_skips_already_processed(self, tmp_path: Path) -> None:
-        processed_file = tmp_path / "processed.json"
-        _save_cache(processed_file, {"EUW1_OLD": True})
+    def test_returns_the_complete_current_snapshot(self) -> None:
+        puuid_map = {"sid-1": "puuid-1"}
+        url = config.MATCH_IDS_BY_PUUID_URL.format(puuid="puuid-1")
+        responses_lib.add(
+            responses_lib.GET,
+            url,
+            json=["EUW1_EXISTING", "EUW1_NEW"],
+        )
 
-        with patch.object(config, "PROCESSED_MATCHES_FILE", processed_file):
-            puuid_map = {"sid-1": "puuid-1"}
-            url = config.MATCH_IDS_BY_PUUID_URL.format(puuid="puuid-1")
-            responses_lib.add(responses_lib.GET, url, json=["EUW1_OLD", "EUW1_NEW"])
+        ids = get_match_ids(puuid_map)
+        assert ids == ["EUW1_EXISTING", "EUW1_NEW"]
 
-            ids = get_match_ids(puuid_map)
-            assert "EUW1_OLD" not in ids
-            assert "EUW1_NEW" in ids
+    def test_refuses_snapshot_when_too_many_player_lists_fail(self) -> None:
+        puuid_map = {"sid-1": "puuid-1", "sid-2": "puuid-2"}
+
+        with patch(
+            "pipeline.ingest._api_get",
+            side_effect=[
+                ["EUW1_OK"],
+                requests.exceptions.ConnectionError("offline"),
+            ],
+        ):
+            with pytest.raises(RuntimeError, match="player match lists"):
+                get_match_ids(puuid_map)
 
 
 # ---------------------------------------------------------------------------
@@ -215,10 +226,7 @@ class TestGetMatchIds:
 class TestFetchMatchDetails:
     @responses_lib.activate
     def test_saves_match_json_files(self, tmp_path: Path, sample_match: dict) -> None:
-        with (
-            patch.object(config, "RAW_DIR", tmp_path),
-            patch.object(config, "PROCESSED_MATCHES_FILE", tmp_path / "processed.json"),
-        ):
+        with patch.object(config, "RAW_DIR", tmp_path):
             match_id = "EUW1_0000000001"
             url = config.MATCH_DETAIL_URL.format(match_id=match_id)
             responses_lib.add(responses_lib.GET, url, json=sample_match)
@@ -231,17 +239,31 @@ class TestFetchMatchDetails:
             assert saved["metadata"]["matchId"] == sample_match["metadata"]["matchId"]
 
     @responses_lib.activate
-    def test_updates_processed_cache(self, tmp_path: Path, sample_match: dict) -> None:
-        processed_file = tmp_path / "processed.json"
+    def test_reuses_cached_raw_and_prunes_old_partition(
+        self,
+        tmp_path: Path,
+        sample_match: dict,
+    ) -> None:
+        match_id = "EUW1_0000000001"
+        old_match_dir = tmp_path / "2026-04-03" / "matches"
+        old_match_dir.mkdir(parents=True)
+        (old_match_dir / f"{match_id}.json").write_text(json.dumps(sample_match))
+
+        with patch.object(config, "RAW_DIR", tmp_path):
+            paths = fetch_match_details([match_id], "2026-04-04")
+
+        assert len(responses_lib.calls) == 0
+        assert paths == [tmp_path / "2026-04-04" / "matches" / f"{match_id}.json"]
+        assert paths[0].exists()
+        assert not (tmp_path / "2026-04-03").exists()
+
+    def test_refuses_snapshot_when_too_many_details_fail(self, tmp_path: Path) -> None:
         with (
             patch.object(config, "RAW_DIR", tmp_path),
-            patch.object(config, "PROCESSED_MATCHES_FILE", processed_file),
+            patch(
+                "pipeline.ingest._api_get",
+                side_effect=requests.exceptions.ConnectionError("offline"),
+            ),
         ):
-            match_id = "EUW1_0000000001"
-            url = config.MATCH_DETAIL_URL.format(match_id=match_id)
-            responses_lib.add(responses_lib.GET, url, json=sample_match)
-
-            fetch_match_details([match_id], "2026-04-04")
-
-            processed = _load_processed_matches(processed_file)
-            assert match_id in processed
+            with pytest.raises(RuntimeError, match="refusing to publish"):
+                fetch_match_details(["EUW1_FAILED"], "2026-04-04")

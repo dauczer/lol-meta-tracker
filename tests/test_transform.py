@@ -5,6 +5,7 @@ All tests run without an API key using the sample_match.json fixture.
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pandas as pd
@@ -64,6 +65,21 @@ class TestParseMatches:
         # 1 good file, 0 bad → 0% malformed → fine
         df = parse_matches(tmp_raw_files)
         assert not df.empty
+
+    def test_discards_all_rows_from_partially_malformed_match(
+        self,
+        tmp_path: Path,
+        sample_match: dict,
+        tmp_raw_files: list[Path],
+    ) -> None:
+        malformed = json.loads(json.dumps(sample_match))
+        del malformed["info"]["participants"][5]["kills"]
+        malformed_path = tmp_path / "malformed.json"
+        malformed_path.write_text(json.dumps(malformed))
+
+        df = parse_matches(tmp_raw_files * 10 + [malformed_path])
+
+        assert len(df) == 100
 
 
 class TestFilterValid:
