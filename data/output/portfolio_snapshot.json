@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T12:23:03Z",
+  "generated_at": "2026-09-28T13:16:01Z",
   "scope": {
-    "patch": "16.18",
+    "patch": "16.19",
     "region": "EUW",
     "tiers": [
       "CHALLENGER",
@@ -13,7 +13,7 @@
     "lookback_days": 7
   },
   "sample": {
-    "matches": 2386,
+    "matches": 2341,
     "champions": 173
   },
   "methodology": {
@@ -23,41 +23,41 @@
     "minimum_movement": 0.005
   },
   "comparison": {
-    "available": true,
-    "same_patch": true,
-    "previous_generated_at": "2026-09-14T12:11:16Z",
+    "available": false,
+    "same_patch": false,
+    "previous_generated_at": "2026-09-21T12:23:03Z",
     "previous_patch": "16.18",
-    "reason": null
+    "reason": "patch_changed"
   },
   "roles": {
     "TOP": {
       "leaders": [
         {
           "rank": 1,
-          "champion": "Jax",
-          "win_rate": 0.641,
-          "pick_rate": 0.049,
-          "games": 117,
-          "kda_ratio": 2.11,
-          "pick_rate_delta": -0.01
+          "champion": "Gwen",
+          "win_rate": 0.646,
+          "pick_rate": 0.023,
+          "games": 48,
+          "kda_ratio": 1.58,
+          "pick_rate_delta": null
         },
         {
           "rank": 2,
-          "champion": "Fiora",
-          "win_rate": 0.583,
-          "pick_rate": 0.04,
-          "games": 96,
-          "kda_ratio": 1.58,
-          "pick_rate_delta": 0.01
+          "champion": "Malphite",
+          "win_rate": 0.596,
+          "pick_rate": 0.045,
+          "games": 94,
+          "kda_ratio": 2.64,
+          "pick_rate_delta": null
         },
         {
           "rank": 3,
-          "champion": "Rumble",
-          "win_rate": 0.575,
-          "pick_rate": 0.047,
-          "games": 113,
-          "kda_ratio": 2.32,
-          "pick_rate_delta": 0.01
+          "champion": "Vayne",
+          "win_rate": 0.636,
+          "pick_rate": 0.016,
+          "games": 33,
+          "kda_ratio": 1.42,
+          "pick_rate_delta": null
         }
       ]
     },
@@ -65,30 +65,30 @@
       "leaders": [
         {
           "rank": 1,
-          "champion": "Karthus",
-          "win_rate": 0.63,
-          "pick_rate": 0.023,
-          "games": 54,
-          "kda_ratio": 2.8,
-          "pick_rate_delta": 0.002
+          "champion": "LeeSin",
+          "win_rate": 0.53,
+          "pick_rate": 0.147,
+          "games": 304,
+          "kda_ratio": 3.14,
+          "pick_rate_delta": null
         },
         {
           "rank": 2,
-          "champion": "Chogath",
-          "win_rate": 0.573,
-          "pick_rate": 0.049,
-          "games": 117,
-          "kda_ratio": 3.19,
-          "pick_rate_delta": -0.03
+          "champion": "Viego",
+          "win_rate": 0.56,
+          "pick_rate": 0.06,
+          "games": 125,
+          "kda_ratio": 2.83,
+          "pick_rate_delta": null
         },
         {
           "rank": 3,
-          "champion": "Qiyana",
-          "win_rate": 0.531,
-          "pick_rate": 0.141,
-          "games": 337,
-          "kda_ratio": 2.7,
-          "pick_rate_delta": 0.005
+          "champion": "Rengar",
+          "win_rate": 0.554,
+          "pick_rate": 0.058,
+          "games": 121,
+          "kda_ratio": 2.84,
+          "pick_rate_delta": null
         }
       ]
     },
@@ -96,30 +96,30 @@
       "leaders": [
         {
           "rank": 1,
-          "champion": "Xerath",
-          "win_rate": 0.63,
-          "pick_rate": 0.023,
-          "games": 54,
-          "kda_ratio": 3.04,
-          "pick_rate_delta": -0.002
+          "champion": "Katarina",
+          "win_rate": 0.598,
+          "pick_rate": 0.061,
+          "games": 127,
+          "kda_ratio": 2.62,
+          "pick_rate_delta": null
         },
         {
           "rank": 2,
-          "champion": "Ahri",
-          "win_rate": 0.547,
-          "pick_rate": 0.115,
-          "games": 274,
-          "kda_ratio": 2.95,
-          "pick_rate_delta": 0.001
+          "champion": "Leblanc",
+          "win_rate": 0.574,
+          "pick_rate": 0.056,
+          "games": 115,
+          "kda_ratio": 3.22,
+          "pick_rate_delta": null
         },
         {
           "rank": 3,
-          "champion": "Galio",
-          "win_rate": 0.56,
-          "pick_rate": 0.056,
-          "games": 134,
-          "kda_ratio": 3.09,
-          "pick_rate_delta": -0.001
+          "champion": "Annie",
+          "win_rate": 0.633,
+          "pick_rate": 0.014,
+          "games": 30,
+          "kda_ratio": 2.31,
+          "pick_rate_delta": null
         }
       ]
     },
@@ -127,30 +127,30 @@
       "leaders": [
         {
           "rank": 1,
-          "champion": "Jinx",
-          "win_rate": 0.565,
-          "pick_rate": 0.084,
-          "games": 200,
-          "kda_ratio": 2.54,
-          "pick_rate_delta": -0.002
+          "champion": "Yunara",
+          "win_rate": 0.553,
+          "pick_rate": 0.204,
+          "games": 423,
+          "kda_ratio": 2.1,
+          "pick_rate_delta": null
         },
         {
           "rank": 2,
-          "champion": "Yunara",
-          "win_rate": 0.538,
-          "pick_rate": 0.202,
-          "games": 483,
-          "kda_ratio": 2.22,
-          "pick_rate_delta": 0.002
+          "champion": "Jinx",
+          "win_rate": 0.567,
+          "pick_rate": 0.061,
+          "games": 127,
+          "kda_ratio": 2.33,
+          "pick_rate_delta": null
         },
         {
           "rank": 3,
-          "champion": "Zeri",
-          "win_rate": 0.547,
-          "pick_rate": 0.111,
-          "games": 265,
-          "kda_ratio": 2.4,
-          "pick_rate_delta": 0.006
+          "champion": "Tristana",
+          "win_rate": 0.539,
+          "pick_rate": 0.129,
+          "games": 267,
+          "kda_ratio": 2.26,
+          "pick_rate_delta": null
         }
       ]
     },
@@ -158,92 +158,36 @@
       "leaders": [
         {
           "rank": 1,
-          "champion": "Rell",
-          "win_rate": 0.556,
-          "pick_rate": 0.12,
-          "games": 286,
-          "kda_ratio": 3.38,
-          "pick_rate_delta": 0.011
+          "champion": "Alistar",
+          "win_rate": 0.559,
+          "pick_rate": 0.086,
+          "games": 179,
+          "kda_ratio": 2.65,
+          "pick_rate_delta": null
         },
         {
           "rank": 2,
-          "champion": "Zoe",
-          "win_rate": 0.615,
-          "pick_rate": 0.027,
-          "games": 65,
-          "kda_ratio": 2.37,
-          "pick_rate_delta": 0.007
+          "champion": "Renata",
+          "win_rate": 0.578,
+          "pick_rate": 0.04,
+          "games": 83,
+          "kda_ratio": 3.31,
+          "pick_rate_delta": null
         },
         {
           "rank": 3,
-          "champion": "Thresh",
-          "win_rate": 0.55,
-          "pick_rate": 0.114,
-          "games": 271,
-          "kda_ratio": 3.2,
-          "pick_rate_delta": 0.008
+          "champion": "Lux",
+          "win_rate": 0.604,
+          "pick_rate": 0.026,
+          "games": 53,
+          "kda_ratio": 2.76,
+          "pick_rate_delta": null
         }
       ]
     }
   },
   "movers": {
-    "up": [
-      {
-        "role": "BOTTOM",
-        "champion": "Ashe",
-        "win_rate": 0.541,
-        "pick_rate": 0.057,
-        "previous_pick_rate": 0.026,
-        "pick_rate_delta": 0.031,
-        "games": 135
-      },
-      {
-        "role": "JUNGLE",
-        "champion": "Rengar",
-        "win_rate": 0.535,
-        "pick_rate": 0.053,
-        "previous_pick_rate": 0.024,
-        "pick_rate_delta": 0.029,
-        "games": 127
-      },
-      {
-        "role": "JUNGLE",
-        "champion": "Nidalee",
-        "win_rate": 0.528,
-        "pick_rate": 0.082,
-        "previous_pick_rate": 0.058,
-        "pick_rate_delta": 0.024,
-        "games": 195
-      }
-    ],
-    "down": [
-      {
-        "role": "JUNGLE",
-        "champion": "Chogath",
-        "win_rate": 0.573,
-        "pick_rate": 0.049,
-        "previous_pick_rate": 0.079,
-        "pick_rate_delta": -0.03,
-        "games": 117
-      },
-      {
-        "role": "TOP",
-        "champion": "Camille",
-        "win_rate": 0.466,
-        "pick_rate": 0.087,
-        "previous_pick_rate": 0.112,
-        "pick_rate_delta": -0.025,
-        "games": 208
-      },
-      {
-        "role": "BOTTOM",
-        "champion": "Viktor",
-        "win_rate": 0.446,
-        "pick_rate": 0.054,
-        "previous_pick_rate": 0.078,
-        "pick_rate_delta": -0.024,
-        "games": 130
-      }
-    ]
+    "up": [],
+    "down": []
   }
 }
